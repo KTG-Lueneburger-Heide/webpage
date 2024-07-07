@@ -46,6 +46,11 @@
 				              <li><a href="{{ .url | relURL }}">{{ .title }}</a></li>
 				              {{ end }}
 										</ul>
+										{{ if .Site.Params.MenuLogo }}
+										<div class="logo">
+											<img src="{{ .Site.Params.MenuLogo }}">
+										</div>
+										{{ end }}
 									</div>
 								</li>
 							</ul>

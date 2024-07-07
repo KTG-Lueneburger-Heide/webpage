@@ -1,3 +1,104 @@
+baseURL = "/"
+title = "KTG Lüneburger Heide"
+languageCode = "de-de"
+defaultContentLanguage = "de"
+paginate = "7"
+#googleAnalytics = "G-XXXXXXXXXX"
+
+[params]
+fancytitle = "KTG Lüneburger Heide" # title for frontpage, may include image
+copyright = "KTG Lüneburger Heide"
+description = 'Ein ganz besonderes Team'
+logo = "img/KTG_Logo_Minimal_Inv.svg"
+MenuLogo = "img/KTG_Logo_Dynamisch_1.svg"
+startbuttonText = "Mitglied werden"
+startbuttonLink = "#"
+body_is_markdown = true
+custom_css = "css/page.css"
+
+[params.social]
+instagram = "ktg_lueneburger_heide"
+facebook = "people/KTG-Lüneburger-Heide/100063574837477/"
+
+[params.one]
+enable = false
+title = 'Entdecke dein Potential'
+body = '''
+In jedem steckt etwas besonderes. Wir finden mit dir gemeinsam 
+heraus wie weit du kommen kannst. 
+'''
+[params.two]
+enable = true
+
+[[params.two.section]]
+img = "img/csm_bundeskader_01.png"
+img_alt = "Bundeskaderturnerinnen der KTG"
+title = 'Entdecke dein Potential'
+body = '''
+In jedem steckt etwas besonderes. Wir entdecken mit dir gemeinsam, was in dir steckt. Egal,
+was deine Ziele sind. Ob du einfach nur Spass am Sport hast, oder dich auf nationaler Ebene 
+mit den Besten messen willst, wir haben die richtige Trainingsgruppe für dich.
+'''
+
+[[params.two.section]]
+video = "img/meinlieblingsplatz.mp4"
+title = 'Mein Lieblingsplatz'
+body = '''
+Nach der Schule gibts nur eins: turnen, turnen, turnen. Dabei hat uns der NDR in der 
+WinArena besucht, um über unseren <br>Lieblingsplatz</br> zu berichten.
+'''
+
+[[params.two.section]]
+img = "img/moin_winsen.png"
+title = 'Starke Mädchen'
+body = '''
+Die Stadtwerke Winsen/Luhe unterstützen die Mädchen tatkräftig, so dass wir 
+unsere Geräte auf den neuesten Stand halten können und auch mal eine Reise zu Wettkämpfen an
+ferne Orte machen können. Lest selbst im 
+[Kundenmagazin der Stadtwerke](https://www.stw-winsen.de/kundenmagazin/2023-01/6/),
+warum sich unser langjähriger Sponsor für das Kunstturnen engagiert.
+'''
+
+[[params.menu.main]]
+url = '/'
+title = "Home"
+
+[[params.menu.main]]
+url = '/team/'
+title = "Team"
+
+[[params.menu.main]]
+url = '/blog/'
+title = "Aktuelles"
+
+[[params.sponsor]]
+title = "Stadtwerke Winsen/Luhe"
+img = "img/stadtwerke_winsen.png"
+
+[[params.sponsor]]
+title = "Sparkasse"
+img = "img/sparkasse.png"
+
+[[params.sponsor]]
+title = "Rewe"
+img = "img/rewe.jpg"
+
+[[params.sponsor]]
+title = "Elling"
+img = "img/elling.png"
+
+[[params.sponsor]]
+title = "fuv"
+img = "img/fuv.png"
+
+[[params.sponsor]]
+title = "Sport Schneider"
+img = "img/sponsor_sportschneider.png"
+
+[[params.sponsor]]
+title = "Berger"
+img = "img/logo_berger.png"
+
 [module]
   [module.hugoVersion]
     extended = false

@@ -1,5 +1,15 @@
 				<!-- Footer -->
 					<footer id="footer">
+
+            <div class="sponsors">
+              <h2>Unsere Sponsoren</h2>
+              <ul class="sponsors">
+                {{ range .Site.Params.Sponsor}}
+                <li><img src="{{ .img }}"></li>
+                {{ end }}
+              </ul>
+            </div>
+            
 						<ul class="icons">
               {{ with .Site.Params.social.twitter }}
               <li><a href="https://twitter.com/{{ . }}" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
@@ -28,10 +38,12 @@
               {{ with .Site.Params.contact.phone }}
               <li><a href="tel:{{ . }}" class="icon solid fa-phone"><span class="label">Phone</span></a></li>
               {{ end }}
-
 						</ul>
+
+
+
 						<ul class="copyright">
-              <li>&copy; {{ now.Year }} {{.Site.Params.copyright | safeHTML }}</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+              <li>&copy; {{ now.Year }} {{.Site.Params.copyright | safeHTML }}</li>
 						</ul>
 					</footer>
 

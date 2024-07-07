@@ -1,4 +1,5 @@
 @import url(fontawesome-all.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
 
 /* https://google-webfonts-helper.herokuapp.com/fonts/open-sans */
 /* open-sans-regular - latin */
@@ -1835,7 +1836,12 @@ input, select, textarea {
 	}
 
 	header.major {
-		margin: 0 0 3.5em 0;
+		margin: 0 0 0 0;
+	}
+
+
+	header.major p:last-child {
+		margin-bottom: 0 !important;
 	}
 
 		header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
@@ -2138,15 +2144,15 @@ input, select, textarea {
 			}
 
 		.icon.style1 {
-			color: #00ffcc;
+			color: #B60B73;
 		}
 
 		.icon.style2 {
-			color: #00f0ff;
+			color: #2f195d;
 		}
 
 		.icon.style3 {
-			color: #76ddff;
+			color: #4e2182;
 		}
 
 /* Image */
@@ -2389,6 +2395,40 @@ input, select, textarea {
 
 				}
 
+/* Sponsors */
+div.sponsors {
+	background-color: white;
+	padding:1em;
+}
+
+ ul.sponsors {
+	cursor: default;
+	list-style: none;
+	padding-left: 0;
+	margin:0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	flex-basis: 49%
+ }
+ div.sponsors h2 {
+	color: #B60B73;
+	margin-bottom: 2em;
+ }
+
+ ul.sponsors li {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 4em 3em 3em;
+	flex: 1 1 20%;
+}
+
+ul.sponsors img {
+	height: 4em
+}
+
+
 /* Table */
 
 	.table-wrapper {
@@ -2547,7 +2587,7 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #ed4933;
+			background-color: #B60B73;
 			box-shadow: none !important;
 			color: #ffffff !important;
 		}
@@ -2731,7 +2771,8 @@ input, select, textarea {
 		display: flex;
 	}
 
-		.spotlight .image {
+		.spotlight .image,
+		.spotlight .video {
 			-moz-order: 1;
 			-webkit-order: 1;
 			-ms-order: 1;
@@ -2744,6 +2785,11 @@ input, select, textarea {
 				border-radius: 0;
 				width: 100%;
 			}
+
+		.spotlight .video video {
+			border-radius: 0;
+			width: 100%;
+		}
 
 		.spotlight .content {
 			padding: 2em 4em 0.1em 4em ;
@@ -2804,7 +2850,8 @@ input, select, textarea {
 
 		@media screen and (max-width: 1280px) {
 
-			.spotlight .image {
+			.spotlight .image,
+			.spotlight .video {
 				width: 45%;
 			}
 
@@ -2824,7 +2871,8 @@ input, select, textarea {
 					display: none;
 				}
 
-				.spotlight .image {
+				.spotlight .image,
+				.spotlight .video {
 					width: 100%;
 				}
 
@@ -2848,7 +2896,7 @@ input, select, textarea {
 /* Wrapper */
 
 	.wrapper {
-		padding: 6em 0 4em 0 ;
+		padding: 3em 0 3em 0 ;
 	}
 
 		.wrapper > .inner {
@@ -2877,8 +2925,8 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #21b2a6;
-			color: #c8ece9;
+			background-color: #700047;
+			color: #e5c8ec;
 		}
 
 			.wrapper.style1 strong, .wrapper.style1 b {
@@ -3411,7 +3459,7 @@ input, select, textarea {
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
-		background: #21b2a6;
+		background: #B60B73;
 		color: #ffffff;
 		height: 100%;
 		max-width: 80%;
@@ -3420,8 +3468,13 @@ input, select, textarea {
 		position: fixed;
 		right: 0;
 		top: 0;
-		width: 20em;
+		width: 10em;
 		z-index: 10002;
+
+		display: flex;
+  	flex-direction: column;
+  	justify-content: space-between;
+		align-items: center;
 	}
 
 		#menu ul {
@@ -3456,8 +3509,13 @@ input, select, textarea {
 
 						#menu ul > li > a {
 							line-height: 3em;
+							font-size: 1.5em;
 						}
-
+						
+						.is-menu-visible #menu {
+							width:100vw;
+							max-width: 100vw;
+						}
 					}
 
 		#menu .close {
@@ -3498,6 +3556,12 @@ input, select, textarea {
 		transform: translateX(0);
 	}
 
+
+	#menu div.logo img {
+		height: 6em;
+	}
+	
+	
 /* Header */
 
 	#header {
@@ -3525,6 +3589,7 @@ input, select, textarea {
 			line-height: inherit;
 			position: absolute;
 			top: 0;
+			font-family: "Alkatra", system-ui;
 		}
 
 			#header h1 a {
@@ -3654,6 +3719,9 @@ input, select, textarea {
 			-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
 			transition: transform 0.5s ease, opacity 0.5s ease;
 			display: inline-block;
+			font-family: "Alkatra", system-ui;
+  		font-optical-sizing: auto;
+  		font-style: normal;
 			font-size: 1.75em;
 			opacity: 1;
 			padding: 0.35em 1em;
@@ -3874,10 +3942,10 @@ input, select, textarea {
 
 	#main > header {
 		padding: 12em 0 10em 0 ;
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/banner.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/banner.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/banner.jpg");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/banner.jpg");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -3951,7 +4019,11 @@ input, select, textarea {
 	}
 
 		#footer .icons {
-			font-size: 1.25em;
+			font-size: 2.25em;
+		}
+
+		#footer ul.icons {
+			margin-top: 1em;
 		}
 
 			#footer .icons a {
@@ -3968,6 +4040,7 @@ input, select, textarea {
 			letter-spacing: 0.225em;
 			list-style: none;
 			padding: 0;
+			padding-top: 1em;
 			text-transform: uppercase;
 		}
 
@@ -4024,10 +4097,10 @@ input, select, textarea {
 /* Landing */
 
 	body.landing #page-wrapper {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/banner-1.png");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/banner-1.png");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/banner-1.png");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/banner-1.png");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -4037,21 +4110,37 @@ input, select, textarea {
 
 	body.landing #footer {
 		background-color: rgba(29, 36, 42, 0.9);
+		padding: 0;
 	}
 
 	body.is-mobile.landing #page-wrapper {
 		background: none;
 	}
 
-	body.is-mobile.landing #banner,
-	body.is-mobile.landing .wrapper.style4 {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
+	@media screen and (orientation: landscape) {
+		body.is-mobile.landing #banner,
+		body.is-mobile.landing .wrapper.style4 {
+			background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/banner-3.png");
+			background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/banner-3.png");
+			background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/banner-3.png");
+			background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/banner-3.png");
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+
+	@media screen and (orientation: portrait) {
+		body.is-mobile.landing #banner,
+		body.is-mobile.landing .wrapper.style4 {
+			background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/banner-2.jpg");
+			background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/banner-2.jpg");
+			background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/banner-2.jpg");
+			background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/banner-2.jpg");
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
 	}
 
 	body.is-mobile.landing #footer {
