@@ -42,6 +42,7 @@ mit den Besten messen willst, wir haben die richtige Trainingsgruppe für dich.
 
 [[params.two.section]]
 video = "img/meinlieblingsplatz.mp4"
+video_alt = "img/meinlieblingsplatz_poster.png"
 title = 'Mein Lieblingsplatz'
 body = '''
 Nach der Schule gibts nur eins: turnen, turnen, turnen. Dabei hat uns der NDR in der 
