@@ -4042,6 +4042,8 @@ ul.sponsors img {
 			padding: 0;
 			padding-top: 1em;
 			text-transform: uppercase;
+			margin: 0;
+			padding-bottom: 1em;
 		}
 
 			#footer .copyright li {
