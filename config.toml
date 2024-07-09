@@ -41,15 +41,6 @@ mit den Besten messen willst, wir haben die richtige Trainingsgruppe für dich.
 '''
 
 [[params.two.section]]
-video = "img/meinlieblingsplatz.mp4"
-video_alt = "img/meinlieblingsplatz_poster.png"
-title = 'Mein Lieblingsplatz'
-body = '''
-Nach der Schule gibts nur eins: turnen, turnen, turnen. Dabei hat uns der NDR in der 
-WinArena besucht, um über unseren <br>Lieblingsplatz</br> zu berichten.
-'''
-
-[[params.two.section]]
 img = "img/moin_winsen.png"
 title = 'Starke Mädchen'
 body = '''
@@ -58,6 +49,15 @@ unsere Geräte auf den neuesten Stand halten können und auch mal eine Reise zu 
 ferne Orte machen können. Lest selbst im 
 [Kundenmagazin der Stadtwerke](https://www.stw-winsen.de/kundenmagazin/2023-01/6/),
 warum sich unser langjähriger Sponsor für das Kunstturnen engagiert.
+'''
+
+[[params.two.section]]
+video = "img/meinlieblingsplatz.mp4"
+video_alt = "img/meinlieblingsplatz_poster.png"
+title = 'Mein Lieblingsplatz'
+body = '''
+Nach der Schule gibts nur eins: turnen, turnen, turnen. Dabei hat uns der NDR in der 
+WinArena besucht, um über unseren <br>Lieblingsplatz</br> zu berichten.
 '''
 
 [[params.menu.main]]

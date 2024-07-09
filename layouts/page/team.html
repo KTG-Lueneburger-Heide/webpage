@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+
+<section id="banner">
+  <div class="inner">
+    <h2>{{ .Title | safeHTML }}</h2>
+	</div>
+</section>
+<section class="wrapper style4">
+  <div class="inner">
+    <h2>Trainerinnen</h2>
+    {{ range .Site.Data.trainer }}
+
+    {{ .name }}
+  
+    {{ end }}
+  </div>
+
+
+
+</section>
+
+{{ partial "footer.html" . }}

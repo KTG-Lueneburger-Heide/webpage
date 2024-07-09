@@ -2896,6 +2896,11 @@ ul.sponsors img {
 /* Wrapper */
 
 	.wrapper {
+		min-height: 70vh;
+	}
+
+
+	.wrapper {
 		padding: 3em 0 3em 0 ;
 	}
 
@@ -3702,11 +3707,15 @@ ul.sponsors img {
 		-ms-justify-content: center;
 		justify-content: center;
 		cursor: default;
-		height: 100vh;
-		min-height: 35em;
+		height: 30vh;
+		min-height: 10em;
 		overflow: hidden;
 		position: relative;
 		text-align: center;
+	}
+
+	body.landing #banner {
+		height: 100vh;
 	}
 
 		#banner h2 {
@@ -3836,8 +3845,12 @@ ul.sponsors img {
 
 			#banner {
 				padding: 7em 3em 5em 3em ;
-				height: 100vh;
+				height: 30vh;
 				min-height: 0;
+			}
+
+			body.landing #banner {
+				height: 100vh;
 			}
 
 				#banner h2 {

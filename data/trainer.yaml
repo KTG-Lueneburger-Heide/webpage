@@ -1,0 +1,15 @@
+- name: Birgit Kruse
+  img: 
+  text: Birgit ist die Cheftrainerin der KTG. 
+  license: A
+  teams:
+  - AK10
+- name: Christina Kruse
+  img:
+  text: |
+    Christina leitet das Sonntagstraining im Leistungszentrum Hamburg in der 
+    Angerstrasse für unsere Turnerinnen in der Leistungssparte. Christina turnte
+    lange Jahre selbst in der KTG und ist aktive Tänzerin. Sie studiert xyz.
+  license: B
+  teams:
+  - LZ

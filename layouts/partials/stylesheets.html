@@ -13,3 +13,19 @@
 {{ $custom_sass := resources.Get . | resources.ToCSS | minify | fingerprint "sha512" }}
 <link rel="stylesheet" href="{{ $custom_sass.RelPermalink }}" integrity="{{ $custom_sass.Data.Integrity }}">
 {{ end }}
+
+{{ with .Params.banner_img }}
+<style>
+  #page-wrapper {
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("{{ . }}");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("{{ . }}");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("{{ . }}");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("{{ . }}");
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding-top: 0;
+	}
+</style>
+{{ end }}

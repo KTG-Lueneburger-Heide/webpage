@@ -28,7 +28,7 @@
     {{ template "_internal/opengraph.html" . }}
     {{ partial "hooks/head-end.html" . }}
 	</head>
-	<body class="landing is-preload">
+	<body class="{{ if .IsHome }}landing{{ end }} is-preload">
 
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
