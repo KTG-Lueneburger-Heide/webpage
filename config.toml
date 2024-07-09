@@ -74,31 +74,31 @@ title = "Aktuelles"
 
 [[params.sponsor]]
 title = "Stadtwerke Winsen/Luhe"
-img = "img/stadtwerke_winsen.png"
+img = "images/sponsors/stadtwerke_winsen.png"
 
 [[params.sponsor]]
 title = "Sparkasse"
-img = "img/sparkasse.png"
+img = "images/sponsors/sparkasse.png"
 
 [[params.sponsor]]
 title = "Rewe"
-img = "img/rewe.jpg"
+img = "images/sponsors/rewe.jpg"
 
 [[params.sponsor]]
 title = "Elling"
-img = "img/elling.png"
+img = "images/sponsors/elling.png"
 
 [[params.sponsor]]
 title = "fuv"
-img = "img/fuv.png"
+img = "images/sponsors/fuv.png"
 
 [[params.sponsor]]
 title = "Sport Schneider"
-img = "img/sponsor_sportschneider.png"
+img = "images/sponsors/sponsor_sportschneider.png"
 
 [[params.sponsor]]
 title = "Berger"
-img = "img/logo_berger.png"
+img = "images/sponsors/logo_berger.png"
 
 [module]
   [module.hugoVersion]

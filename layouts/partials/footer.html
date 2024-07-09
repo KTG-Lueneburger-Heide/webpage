@@ -4,8 +4,10 @@
             <div class="sponsors">
               <h2>Unsere Sponsoren</h2>
               <ul class="sponsors">
-                {{ range .Site.Params.Sponsor}}
-                <li><img src="{{ .img }}"></li>
+                {{ range .Site.Params.Sponsor }}
+                {{ with resources.Get .img }}
+                <li><img src="{{ .RelPermalink }}"></li>
+                {{ end }}
                 {{ end }}
               </ul>
             </div>
