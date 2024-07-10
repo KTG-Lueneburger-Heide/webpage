@@ -3574,7 +3574,7 @@ ul.sponsors img {
 		-webkit-transition: background-color 0.2s ease;
 		-ms-transition: background-color 0.2s ease;
 		transition: background-color 0.2s ease;
-		background: #2e3842;
+		background: #3c0e30;
 		height: 3em;
 		left: 0;
 		line-height: 3em;
@@ -3820,7 +3820,8 @@ ul.sponsors img {
 				width: 1.5em;
 			}
 
-		#banner:after {
+		
+		body.landing #banner:after {
 			pointer-events: none;
 			-moz-transition: opacity 3s ease-in-out;
 			-webkit-transition: opacity 3s ease-in-out;
@@ -4026,7 +4027,7 @@ ul.sponsors img {
 /* Footer */
 
 	#footer {
-		padding: 6em 0 4em 0 ;
+		padding: 0em 0 4em 0 ;
 		background-color: #1d242a;
 		text-align: center;
 	}
