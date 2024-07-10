@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://ktg-lueneburger-heide.github.io/webpage/"
 title = "KTG Lüneburger Heide"
 languageCode = "de-de"
 defaultContentLanguage = "de"
@@ -61,15 +61,15 @@ WinArena besucht, um über unseren <br>Lieblingsplatz</br> zu berichten.
 '''
 
 [[params.menu.main]]
-url = '/'
+url = ''
 title = "Home"
 
 [[params.menu.main]]
-url = '/team/'
+url = 'team/'
 title = "Team"
 
 [[params.menu.main]]
-url = '/blog/'
+url = 'blog/'
 title = "Aktuelles"
 
 [[params.sponsor]]
