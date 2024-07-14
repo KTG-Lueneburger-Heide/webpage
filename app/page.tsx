@@ -7,27 +7,11 @@ import type { SplashData } from "@/data/datatypes";
 import splashes from '@/data/splashes.yaml'
 import Sponsors from "@/components/sponsors";
 import SocialMedia from "@/components/social";
+import Banner from "@/components/banner";
 
 export default function Home() {
 
-  // Check visibility of the banner element
-  // Source: https://dev.to/jmalvarez/check-if-an-element-is-visible-with-react-hooks-27h8
-  const bannerRef = useRef<HTMLDivElement>(null);
-
-  const isBannerVisible = useIsVisible( bannerRef )
-  function useIsVisible(ref : RefObject<Element>) {
-    
-    const [isIntersecting, setIntersecting] = useState(false);
-  
-    useEffect(() => {
-      const observer = new IntersectionObserver(([entry]) =>
-        setIntersecting(entry.isIntersecting)
-      );
-      if (ref && ref.current) observer.observe(ref.current);
-    }, [ref]);
-  
-    return isIntersecting;
-  }
+  const [isBannerVisible, setBannerVisible] = useState(true);
 
   // Splash elements in the landing page
   const Splash = ({splash} : {splash : SplashData} ) => {
@@ -51,9 +35,7 @@ export default function Home() {
     <Header transparent={isBannerVisible}/>
     <main className="flex min-h-screen flex-col items-center justify-start p-0">
       <div id="page-wrapper" className="bg-landing-landscape w-screen h-screen overflow-scroll bg-center bg-cover bg-no-repeat">
-        <div className="h-screen" ref={bannerRef}>
-
-        </div>
+        <Banner onVisibilityChange={setBannerVisible}/>
         {splashes.map( (s,i) => <Splash splash={s} key={i}/>)}
         <footer>
           <Sponsors/>
