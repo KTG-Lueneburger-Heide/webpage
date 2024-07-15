@@ -1,7 +1,4 @@
-"use client"
-
 import Header from "@/components/header";
-import { useEffect, useState, useRef, RefObject } from "react";
 import ReactMarkdown from 'react-markdown';
 import type { SplashData } from "@/data/datatypes";
 import splashes from '@/data/splashes.yaml'
@@ -10,8 +7,6 @@ import SocialMedia from "@/components/social";
 import Banner from "@/components/banner";
 
 export default function Home() {
-
-  const [isBannerVisible, setBannerVisible] = useState(true);
 
   // Splash elements in the landing page
   const Splash = ({splash} : {splash : SplashData} ) => {
@@ -32,10 +27,11 @@ export default function Home() {
 
   return (
     <>
-    <Header transparent={isBannerVisible}/>
+    
     <main className="flex min-h-screen flex-col items-center justify-start p-0">
       <div id="page-wrapper" className="bg-landing-landscape w-screen h-screen overflow-scroll bg-center bg-cover bg-no-repeat">
-        <Banner onVisibilityChange={setBannerVisible}/>
+        <Header transparent={true}/>
+        <Banner/>
         {splashes.map( (s,i) => <Splash splash={s} key={i}/>)}
         <footer>
           <Sponsors/>

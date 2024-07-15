@@ -6,6 +6,13 @@
 @tailwind components;
 @tailwind utilities;
 
+#header:has(~ #banner.onScreen)  {
+
+  h1 {
+    background-color: rgba(0,0,0,0);
+  }
+
+}
 :root {
   --foreground: white;
   --background: #570035;

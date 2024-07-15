@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 
@@ -9,11 +9,16 @@ export const metadata: Metadata = {
   description: "Ein ganz besonderes Team",
 };
 
+export const vieport: Viewport = {
+  themeColor: '#570035'
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <head>

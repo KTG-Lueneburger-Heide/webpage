@@ -1,7 +1,10 @@
-import { RefObject, useEffect, useRef, useState } from 'react'
-import styles from './banner.module.css'
+"use client"
 
-export default function Banner({onVisibilityChange} : { onVisibilityChange : (isVisible : boolean) => void} ) {
+import { RefObject, useEffect, useRef, useState } from 'react'
+
+export default function Banner(
+  { onVisibilityChange = () => {}} : { onVisibilityChange? : (isVisible : boolean) => void} 
+) {
 
    // Check visibility of the banner element
   // Source: https://dev.to/jmalvarez/check-if-an-element-is-visible-with-react-hooks-27h8
@@ -28,7 +31,7 @@ export default function Banner({onVisibilityChange} : { onVisibilityChange : (is
   }, [isBannerVisible])
   
   return (
-    <div className="h-screen" ref={bannerRef}>
+    <div id="banner" className={`h-screen ${isBannerVisible ? "onScreen" : "offScreen"}`} ref={bannerRef}>
 
     </div>
   )
