@@ -44,7 +44,7 @@ export default function Header({transparent=true}) {
   return (
     <header id="header" className={`z-10 fixed top-0 left-0 w-screen`}>
       <h1 className={`font-serif text-lg md:text-xl p-4 transition-all duration-200 bg-lipstick-950`}>
-        <Link href="index.html" className={`transition-all duration-200 ${transparent ? "invisible" : ""}`}>{GlobalConfig.title}</Link>
+        <Link href="index.html" className={`transition-all duration-200`}>{GlobalConfig.title}</Link>
       </h1>
       <Menu items={menuItems} />
     </header>
