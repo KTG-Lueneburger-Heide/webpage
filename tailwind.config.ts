@@ -48,6 +48,36 @@ const config: Config = {
         "landing-landscape": 'linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/images/backgrounds/banner-1.png")',
         "landing-portrait": 'linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/images/backgrounds/banner-2.jpg")',
       },
+      transitionProperty: {
+        'width': 'width'
+      },
+      keyframes: {
+        'grow-width': {
+          '0%' : { width: '0%' },
+          '100%' : { width: '100%'}
+        },
+        'blend-scale': {
+          from : { transform: 'scale(0.75)', opacity: '0'},
+          to : { transform: 'scale(1)', opacity: '1' }
+        },
+        'blend-in': {
+          from : { opacity: '0'},
+          to : { opacity: '1' }
+        }
+      },
+      animation: {
+        'grow-width': "grow-width 0.85s ease forwards",
+        'blend-scale': "blend-scale 0.5s forwards",
+        'blend-in': "blend-in 0.5s forwards"
+      },
+      animationDelay: {
+        100: '100ms',
+        200: '200ms',
+        300: '300ms',
+        400: '400ms',
+        500: '500ms',
+        1000: '1000ms'
+      }
     },
   },
   plugins: [
@@ -64,7 +94,18 @@ const config: Config = {
         },
         { values: theme('backgroundImage') }
       )
-    })
+    }),
+    plugin(function ({ matchUtilities, theme }) { 
+      matchUtilities({
+        'animation-delay': (value) => ({
+            animationDelay: value,
+        }),
+    }, {
+        values: theme('animationDelay'),
+        variants: ["responsive", "hover"],
+        supportsNegativeValues: true,
+    });
+    }),
   ],
 };
 export default config;

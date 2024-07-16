@@ -40,7 +40,7 @@ export default function Banner(
   }, [isBannerVisible])
   
   return (
-    <div id="banner"  className={`${className} h-screen w-screen ${isBannerVisible ? "onScreen" : "offScreen"}`} ref={bannerRef}>
+    <div id="banner"  className={`h-screen w-screen ${isBannerVisible ? "onScreen" : "offScreen"} ${className}`} ref={bannerRef}>
       {children}
     </div>
   )

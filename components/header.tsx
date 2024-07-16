@@ -42,8 +42,8 @@ export default function Header({transparent=true}) {
   ]
   //${transparent ? "bg-transparent" : "bg-lipstick-950"}
   return (
-    <header id="header" className={`z-10 fixed top-0 left-0 w-screen`}>
-      <h1 className={`font-serif text-lg md:text-xl p-4 transition-all duration-200 bg-lipstick-950`}>
+    <header id="header" className={`z-10 fixed top-0 left-0 w-screen opacity-0 animate-blend-in animation-delay-200`}>
+      <h1 className={`font-serif text-lg md:text-xl p-4 hidden transition-all duration-200 bg-lipstick-950`}>
         <Link href="index.html" className={`transition-all duration-200`}>{GlobalConfig.title}</Link>
       </h1>
       <Menu items={menuItems} />
