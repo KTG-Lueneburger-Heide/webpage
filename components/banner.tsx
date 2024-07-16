@@ -1,9 +1,18 @@
 "use client"
 
-import { RefObject, useEffect, useRef, useState } from 'react'
+import { PropsWithChildren, ReactNode, RefObject, useEffect, useRef, useState } from 'react'
+
+type BannerProps = {
+  onVisibilityChange? : (isVisible : boolean) => void,
+  className? : string
+}
 
 export default function Banner(
-  { onVisibilityChange = () => {}} : { onVisibilityChange? : (isVisible : boolean) => void} 
+  { 
+    onVisibilityChange = () => {},
+    children,
+    className = ""
+  } : PropsWithChildren<BannerProps>
 ) {
 
    // Check visibility of the banner element
@@ -31,8 +40,8 @@ export default function Banner(
   }, [isBannerVisible])
   
   return (
-    <div id="banner" className={`h-screen w-screen parallax-landing-landscape ${isBannerVisible ? "onScreen" : "offScreen"}`} ref={bannerRef}>
-
+    <div id="banner"  className={`${className} h-screen w-screen ${isBannerVisible ? "onScreen" : "offScreen"}`} ref={bannerRef}>
+      {children}
     </div>
   )
 }
