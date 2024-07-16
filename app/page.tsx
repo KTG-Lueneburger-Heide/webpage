@@ -1,9 +1,7 @@
-import Header from "@/components/header";
 import ReactMarkdown from 'react-markdown';
 import type { SplashData } from "@/data/datatypes";
 import splashes from '@/data/splashes.yaml'
-import Sponsors from "@/components/sponsors";
-import SocialMedia from "@/components/social";
+
 import Banner from "@/components/banner";
 
 export default function Home() {
@@ -26,23 +24,9 @@ export default function Home() {
   }
 
   return (
-    <>
-    
-    <main className="flex min-h-screen flex-col items-center justify-start p-0">
-      <div id="page-wrapper" className="bg-landing-landscape w-screen h-screen overflow-scroll bg-center bg-cover bg-no-repeat">
-        <Header transparent={true}/>
-        <Banner/>
-        {splashes.map( (s,i) => <Splash splash={s} key={i}/>)}
-        <footer>
-          <Sponsors/>
-          <SocialMedia/>
-          <ul className="pb-20 text-center uppercase tracking-widest bg-oxford-blue-900 text-oxford-blue-500">
-            <li className="p-4">© 2024 KTG Lüneburger Heide</li>
-          </ul>
-        </footer>
-        
-      </div>
-    </main>
+    <>        
+      <Banner/>
+      {splashes.map( (s,i) => <Splash splash={s} key={i}/>)}
     </>
   );
 } 

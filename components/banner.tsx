@@ -31,7 +31,7 @@ export default function Banner(
   }, [isBannerVisible])
   
   return (
-    <div id="banner" className={`h-screen ${isBannerVisible ? "onScreen" : "offScreen"}`} ref={bannerRef}>
+    <div id="banner" className={`h-screen w-screen parallax-landing-landscape ${isBannerVisible ? "onScreen" : "offScreen"}`} ref={bannerRef}>
 
     </div>
   )

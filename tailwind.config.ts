@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const plugin = require('tailwindcss/plugin')
 
 const config: Config = {
   content: [
@@ -48,6 +49,21 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function({matchUtilities, theme}) {
+      matchUtilities(
+        {
+          parallax: (value) => ({
+              backgroundImage: value,
+              backgroundAttachment: 'fixed',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover'
+          })
+        },
+        { values: theme('backgroundImage') }
+      )
+    })
+  ],
 };
 export default config;

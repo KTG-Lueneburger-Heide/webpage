@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header";
+import Sponsors from "@/components/sponsors";
+import SocialMedia from "@/components/social";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
@@ -28,7 +31,17 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"></link>
       </head>
       <body className={openSans.className}>
-        {children}
+        <Header transparent={true}/>
+        <main className="flex min-h-screen flex-col items-center justify-start p-0">
+          {children}
+        </main>
+        <footer>
+          <Sponsors/>
+          <SocialMedia/>
+          <ul className="pb-20 text-center uppercase tracking-widest bg-oxford-blue-900 text-oxford-blue-500">
+            <li className="p-4">© 2024 KTG Lüneburger Heide</li>
+          </ul>
+        </footer>
       </body>
     </html>
   );

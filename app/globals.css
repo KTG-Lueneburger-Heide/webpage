@@ -6,14 +6,16 @@
 @tailwind components;
 @tailwind utilities;
 
-#header:has(~ #banner.onScreen)  {
+/* manage transparency of header line */
+:root:has(#banner.onScreen)  {
 
-  h1 {
+  header h1 {
     background-color: rgba(0,0,0,0);
     visibility: hidden;
   }
 
 }
+
 :root {
   --foreground: white;
   --background: #570035;
