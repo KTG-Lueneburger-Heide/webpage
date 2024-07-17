@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-const plugin = require('tailwindcss/plugin')
+import plugin from 'tailwindcss/plugin'
 
 const config: Config = {
   content: [
@@ -63,12 +63,17 @@ const config: Config = {
         'blend-in': {
           from : { opacity: '0'},
           to : { opacity: '1' }
+        },
+        'slide-up': {
+          from: { transform: 'translateY(10em)'},
+          to: { transform: 'translate(0)'}
         }
       },
       animation: {
         'grow-width': "grow-width 0.85s ease forwards",
         'blend-scale': "blend-scale 0.5s forwards",
-        'blend-in': "blend-in 0.5s forwards"
+        'blend-in': "blend-in 0.5s forwards",
+        'slide-up': "slide-up 2s forwards"
       },
       animationDelay: {
         100: '100ms',
@@ -102,7 +107,6 @@ const config: Config = {
         }),
     }, {
         values: theme('animationDelay'),
-        variants: ["responsive", "hover"],
         supportsNegativeValues: true,
     });
     }),

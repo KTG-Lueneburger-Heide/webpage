@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header";
-import Sponsors from "@/components/sponsors";
-import SocialMedia from "@/components/social";
+import Header from "@/components/visuals/header";
+import Sponsors from "@/components/visuals/sponsors";
+import SocialMedia from "@/components/visuals/social";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: "Ein ganz besonderes Team",
 };
 
-export const vieport: Viewport = {
+export const viewport: Viewport = {
   themeColor: '#570035'
 }
 
