@@ -19,6 +19,13 @@ declare module '*/socialmedia.yaml' {
   export default data;
 }
 
+declare module '*/trainer.yaml' {
+  import type { Trainer } from '@/data/datatypes';
+  const data : Trainer[];
+
+  export default data;
+}
+
 declare module '*.yaml' {
   const json: any;
   export default json;

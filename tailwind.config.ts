@@ -40,13 +40,15 @@ const config: Config = {
     fontFamily: {
       'sans': ['Open Sans', 'ui-sans-serif', 'system-ui'],
       'serif': ['Alkatra', 'ui-serif', 'Georgia'],
+      'poppins' : ['Poppins']
     },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "landing-landscape": 'linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/images/backgrounds/banner-1.png")',
-        "landing-portrait": 'linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/images/backgrounds/banner-2.jpg")',
+        "landing-portrait": 'linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/images/backgrounds/banner-2-small.jpg")',
+        "team": 'linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/images/backgrounds/team_photo.jpg")',
       },
       transitionProperty: {
         'width': 'width'

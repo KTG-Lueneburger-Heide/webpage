@@ -18,3 +18,11 @@ export type SocialMedia = {
   twitter?: string,
   tictoc?: string
 }
+
+export type Trainer = {
+  name: string,
+  license?: string,
+  teams: string[],
+  text?: string,
+  image?: string
+}

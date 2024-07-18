@@ -2,9 +2,9 @@
 
 import Link from 'next/link';
 import GlobalConfig from "@/app/app.config.js"
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars,faClose } from '@fortawesome/free-solid-svg-icons'
+import { faBars,faClose, faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 
 type MenuProps = {
@@ -20,15 +20,15 @@ const Menu = ( { items } : MenuProps) => {
 
   return (
     <nav  id="nav" className='absolute top-0 right-0'>
-      <div className={`${isExpanded ? "hidden" : ""} cursor-pointer p-4`} onClick={()=>setExpanded(true)}>
-        <span className='p-2 uppercase font-sans text-lg tracking-widest'>Menü</span>
-        <span className='p-0'><FontAwesomeIcon icon={faBars} /></span>
-      </div>
-      <div className={`${isExpanded ? "" : "hidden"} bg-lipstick-800 w-screen sm:w-64 h-screen`}>
-        <div className='p-4 text-right text-lg'>
-          <span onClick={()=>setExpanded(false)}><FontAwesomeIcon icon={faClose} /></span>
+        <div className="cursor-pointer p-4 text-lg" onClick={()=>setExpanded(true)} hidden={isExpanded}>
+          <span className='p-2 uppercase font-sans tracking-widest'>Menü</span>
+          <span className='p-0'><FontAwesomeIcon className="inline align-[-2px]" icon={faBars} height="1em"/></span>
         </div>
-      </div>
+        <div className='bg-lipstick-800 w-screen sm:w-64 h-screen' hidden={!isExpanded}>
+          <div className='p-4 text-right text-lg'>
+            <FontAwesomeIcon icon={faClose}  onClick={() => setExpanded(false)}/>
+          </div>
+        </div>
     </nav>
   )
 }
@@ -46,7 +46,10 @@ export default function Header({transparent=true}) {
       <h1 className={`font-serif text-lg md:text-xl p-4 hidden transition-all duration-200 bg-lipstick-950`}>
         <Link href="index.html" className={`transition-all duration-200`}>{GlobalConfig.title}</Link>
       </h1>
-      <Menu items={menuItems} />
+      <Suspense fallback={<FontAwesomeIcon icon={faSpinner} width={20}/>}>
+        <Menu items={menuItems} />
+      </Suspense>
+      
     </header>
   )
 

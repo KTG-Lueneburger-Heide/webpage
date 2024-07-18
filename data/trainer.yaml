@@ -1,0 +1,62 @@
+- name: Birgit Kruse
+  image: /images/people/kruse_birgit.png
+  text: |
+    Trainerin A Gerätturnen weiblich
+    - Gesundheitsmanagerin (B.A.)  
+    - Cardiofitnesstrainerin
+    - Entspannungstrainerin
+    - Ernährungsberaterin
+    - Fitnesstrainerin B
+  license: A
+  teams:
+  - AK 10
+
+- name: Annika Rücker
+  image: /images/people/ruecker_annika.png
+  text: |
+    Trainerin B Gerätturnen weiblich
+    
+    ### Trainingsschwerpunkte:
+
+    - Kür Spitze
+    - Kür modifiziert
+  license: B
+  teams:
+  - LK
+  - Kür
+
+- name: Christina Kruse
+  image: /images/people/kruse_christina_2.png
+  text: |
+    Trainerin B Gerätturnen weiblich
+
+    ### Trainingsschwerpunkt:
+    
+    - Choreographie
+  license: B
+  teams:
+  - LZ
+
+- name: Nora Niblett
+  image: /images/people/niblett_nora.png
+  teams:
+  - AK 8
+  text:
+    Übungsleiter
+
+- name: Tetiana Plaspohl
+  text: |
+    Trainingsunterstützung
+    ### Trainingsschwerpunkt
+    
+    - Nachwuchs 
+
+- name: Lilly Dittmann
+  image: /images/people/dittmann_lilly.png
+  text: |
+    Trainingsunterstützung
+
+- name: Alina Borisova
+  image: /images/people/borisova_alina.png
+  text: |
+    Trainingsunterstützung
