@@ -26,3 +26,26 @@ export type Trainer = {
   text?: string,
   image?: string
 }
+
+export type ContactRecord = {
+  type: string,
+  tags: string[],
+  personal: {
+    avatar?: {
+      filename: string,
+      path: string,
+      filesize: number,
+      meta: {
+        height: number,
+        width: number
+      }
+    },
+    isPerson: boolean,
+    isOrganisation: boolean,
+    name: string,
+    humanNameShort: string,
+    personFirstName: string,
+    personLastName: string,
+    _id: string
+  }
+}

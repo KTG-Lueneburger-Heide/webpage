@@ -5,7 +5,7 @@ export default function Sponsors() {
 
   const Logo = ({sponsor} : {sponsor : SponsorData}) => {
 
-    return (<img className="max-w-[15rem] sm:max-w-max sm:h-[5em] my-6 m-5 sm:m-10" src={sponsor.img} alt={sponsor.title}></img>)
+    return (<img className="max-w-[15rem] sm:max-w-max sm:h-[5em] my-6 m-5 sm:m-10" src={sponsor.img} alt={sponsor.title} loading='lazy'></img>)
   }
 
   return (

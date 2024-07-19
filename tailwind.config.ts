@@ -49,6 +49,7 @@ const config: Config = {
         "landing-landscape": 'linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/images/backgrounds/banner-1.png")',
         "landing-portrait": 'linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/images/backgrounds/banner-2-small.jpg")',
         "team": 'linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/images/backgrounds/team_photo.jpg")',
+        "team-portrait": 'linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/images/backgrounds/team_photo_portrait.jpg")',
       },
       transitionProperty: {
         'width': 'width'

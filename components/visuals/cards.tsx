@@ -5,10 +5,12 @@ import styles from "./cards.module.css"
 export type TrainerCardProps = {
   name: string,
   image?: string,
-  teams: string[],
+  teams?: string[],
   license?: string,
   text?: string
 }
+
+
 
 export default function TrainerCard( data : TrainerCardProps ) {
 
@@ -48,6 +50,32 @@ export default function TrainerCard( data : TrainerCardProps ) {
           <div className={styles.description}>
             <ReactMarkdown>{data.text}</ReactMarkdown>
           </div>
+        </div>
+      </div>  
+  )
+
+}
+
+export type ContactCardProps = {
+  name: string,
+  image: string
+}
+
+export function ContactCard( {name,image} : ContactCardProps ) {
+
+  const Picture = ( {url} : {url: string} ) => {
+    return (
+      <><img src={url} loading="lazy"/></>
+    )
+  }
+
+  return (
+    <div className={styles.contact}>
+        <div className={styles.imgRoundBx}>
+          { image ? <Picture url={image} /> : <></>}
+        </div>
+        <div className={styles.contentBx}>
+          <h2>{ name }</h2>
         </div>
       </div>  
   )
