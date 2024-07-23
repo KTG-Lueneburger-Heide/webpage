@@ -11,6 +11,7 @@ import Arrow from '@/components/icons/arrow';
 import { useEffect, useRef, useState } from 'react';
 import { useIsVisible } from '@/components/utils/visibility';
 import Link from 'next/link';
+import { HeaderTransparencyBorder } from '@/components/visuals/header';
 
 export default function Home() {
 
@@ -41,6 +42,7 @@ export default function Home() {
         </div>
         </div>
       </Banner>
+      <HeaderTransparencyBorder />
       {/* The next div is needed as an ugly hack. Visibility of the Splashes is used to remove the "more" arrow as soon as
         someone scrolls
        */}

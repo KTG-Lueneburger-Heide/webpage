@@ -8,11 +8,14 @@
 @tailwind utilities;
 
 /* manage transparency of header line */
-:root:has(#banner.offScreen)  {
+:root:has(#banner.offScreen),
+:root:has(#HTB.offScreen) 
+{
 
   header h1 {
     background-color: var(--background);
     display: block;
+    opacity: 1;
   }
 
 }
