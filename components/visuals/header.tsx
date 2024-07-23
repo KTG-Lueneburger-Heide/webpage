@@ -5,6 +5,7 @@ import GlobalConfig from "@/app/app.config.js"
 import { Suspense, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars,faClose, faSpinner } from '@fortawesome/free-solid-svg-icons'
+import { LogoDynamic } from '../icons/logo';
 
 
 type MenuProps = {
@@ -28,8 +29,10 @@ const Menu = ( { items } : MenuProps) => {
           <div className='p-4 text-right text-lg'>
             <FontAwesomeIcon icon={faClose}  onClick={() => setExpanded(false)}/>
           </div>
-          {items.map( (m,i) => <div key={i}><Link href={m.link} onClick={(e) => setExpanded(false)}>{m.name}</Link></div>)}
+          {items.map( (m,i) => <div key={i} className='mx-5 text-2xl py-4 last:after:hidden after:content-[""] after:bg-lipstick-200 after:h-[1px] after:w-full after:block after:translate-y-4'><Link href={m.link} onClick={(e) => setExpanded(false)}>{m.name}</Link></div>)}
+          <div className='w-[7em] left-1/2 bottom-10 absolute -translate-x-1/2'><LogoDynamic /></div>
         </div>
+        
         
     </nav>
   )
