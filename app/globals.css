@@ -47,6 +47,13 @@ h2.title::after {
 :root {
   --foreground: white;
   --background: #570035;
+  --color-primary-loading: theme(colors.lipstick.600);
+  --color-secondary-loading: theme(colors.oxford-blue.200);
+}
+
+.main-loading-page {
+  --color-primary-loading: theme(colors.lipstick.900);
+  --color-secondary-loading: theme(colors.lipstick.800);
 }
 
 body {
@@ -58,4 +65,20 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@keyframes spin { 
+  0.00% {
+    animation-timing-function: cubic-bezier(0.62,0.01,0.92,0.40);
+    transform: translate(0.00px,0.00px) rotate(0.00deg) scale(1.00, 1.00) skew(0deg, 0.00deg) ;
+    opacity: 1.00;
+  }
+  50.00% {
+    animation-timing-function: cubic-bezier(0.08,0.60,0.39,0.97);
+    transform: translate(0.00px,0.00px) rotate(180.00deg) ;
+  }
+  100.00% {
+    animation-timing-function: cubic-bezier(0.08,0.60,0.39,0.97);
+    transform: translate(0.00px,0.00px) rotate(360.00deg) ;
+  } 
 }

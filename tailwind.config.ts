@@ -91,6 +91,21 @@ const config: Config = {
         'slide-up': {
           from: { transform: 'translateY(10em)'},
           to: { transform: 'translate(0)'}
+        },
+        'spin': {
+          '0.00%' : {
+            'animation-timing-function': 'cubic-bezier(0.62,0.01,0.92,0.40)',
+            transform: 'translate(0.00px,0.00px) rotate(0.00deg) scale(1.00, 1.00) skew(0deg, 0.00deg)',
+            opacity: '1.00'
+          },
+          '50.00%': {
+            'animation-timing-function': 'cubic-bezier(0.08,0.60,0.39,0.97)',
+            transform: 'translate(0.00px,0.00px) rotate(180.00deg)'
+          },
+          '100.00%': {
+            'animation-timing-function': 'cubic-bezier(0.08,0.60,0.39,0.97)',
+            transform: 'translate(0.00px,0.00px) rotate(360.00deg)'
+          } 
         }
       },
       animation: {

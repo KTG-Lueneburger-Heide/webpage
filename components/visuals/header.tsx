@@ -22,18 +22,21 @@ const Menu = ( { items } : MenuProps) => {
 
   return (
     <nav  id="nav" className='absolute top-0 right-0'>
+        
         <div className="cursor-pointer p-4 text-lg" onClick={()=>setExpanded(true)} hidden={isExpanded}>
           <span className='p-2 uppercase font-sans tracking-widest'>Menü</span>
           <span className='p-0'><FontAwesomeIcon className="inline align-[-2px]" icon={faBars} height="1em"/></span>
         </div>
-        <div className='bg-lipstick-800 w-screen sm:w-64 h-screen' hidden={!isExpanded}>
-          <div className='p-4 text-right text-lg'>
-            <FontAwesomeIcon icon={faClose}  onClick={() => setExpanded(false)}/>
+        <div className='fixed top-0 left-0 w-screen h-screen z-10 bg-oxford-blue-900 bg-opacity-60' hidden={!isExpanded} onClick={(e) => setExpanded(false)}>
+          <div className='relative bg-lipstick-800 w-screen sm:w-64 h-screen ml-auto' hidden={!isExpanded} onClick={ (e) => e.stopPropagation() }>
+            <div className='p-4 text-right text-lg'>
+              <FontAwesomeIcon icon={faClose}  onClick={() => setExpanded(false)}/>
+            </div>
+            <div>
+            {items.map( (m,i) => <div key={i} className='mx-5 text-2xl py-4 last:after:hidden after:content-[""] after:bg-lipstick-200 after:h-[1px] after:w-full after:block after:translate-y-4'><Link href={m.link} onClick={(e) => setExpanded(false)}>{m.name}</Link></div>)}
+            </div>
+            <div className='w-[7em] left-1/2 bottom-10 absolute -translate-x-1/2'><LogoDynamic /></div>
           </div>
-          <div>
-          {items.map( (m,i) => <div key={i} className='mx-5 text-2xl py-4 last:after:hidden after:content-[""] after:bg-lipstick-200 after:h-[1px] after:w-full after:block after:translate-y-4'><Link href={m.link} onClick={(e) => setExpanded(false)}>{m.name}</Link></div>)}
-          </div>
-          <div className='w-[7em] left-1/2 bottom-10 absolute -translate-x-1/2'><LogoDynamic /></div>
         </div>
         
         

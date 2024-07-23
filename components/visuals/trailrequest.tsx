@@ -42,8 +42,10 @@ export default function TrialRequestForm() {
       xhr.setRequestHeader("Content-Type", "application/json")
       xhr.onload = (e) => {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            setSubmitted(true)
+          setSubmitting(false)
+          setSubmitted(true)
         } else {
+          setSubmitting(false)
           setError(true)
         }
       }
@@ -56,7 +58,7 @@ export default function TrialRequestForm() {
     }
 
     return (
-      <form className="grid grid-rows-2 md:grid-rows-1 md:grid-cols-3 gap-5" onSubmit={handleSubmission}>
+      <form className={`grid grid-rows-2 md:grid-rows-1 md:grid-cols-3 gap-5 ${submitting ? 'isSubmitting ' : ''} ${error ? 'hasError ' : ''} ${submitted ? 'isSubmitted ' : ''}`} onSubmit={handleSubmission}>
         <input className="md:col-span-2 text-base md:text-2xl bg-opacity-10 bg-oxford-blue-300 p-2 border-white border-solid border-2 rounded-md invalid:[&:not(:placeholder-shown):not(:focus)]:border-lipstick-700 peer" 
                 type="email" 
                 placeholder="meine@email.de" 
@@ -68,14 +70,7 @@ export default function TrialRequestForm() {
       </form>
       )}
 
-  const Thanks = () => (
-    <div className="text-center md:text-2xl text-oxford-blue-200 py-3">Danke! Wir melden uns bei dir</div>
-  )
-
-  const Error = () => {
-    <div className="text-center text-2xl text-lipstick-700-blue-200 py-3">Ups! Da ist was schief gegangen. Bitte schickt uns eine eMail an ktg@lueneburger-heide.de</div>
-  }
   return (
-    !submitted ? <Form/> : <Thanks/>
+    <Form/> //!submitted ? <Form/> : <Thanks/>
   )
 }
