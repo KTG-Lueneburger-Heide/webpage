@@ -17,6 +17,15 @@
 
 }
 
+
+  .bgr-pink-splash {
+    @apply bg-pink-splash-sm md:bg-pink-splash-md lg:bg-pink-splash-lg xl:bg-pink-splash-full
+  }
+
+  .bgr-pink-splash-portrait {
+    @apply  bg-pink-splash-portrait-sm md:bg-pink-splash-portrait-md lg:bg-pink-splash-portrait-lg xl:bg-pink-splash-portrait-full
+  }
+
 h2.title {
   @apply font-serif text-xl md:text-4xl px-7 pt-3 pb-2 md:pt-5 md:pb-4 mb-10 opacity-0 animate-blend-scale animation-delay-500;
 }

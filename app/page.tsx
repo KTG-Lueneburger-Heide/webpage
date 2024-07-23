@@ -10,6 +10,7 @@ import { LogoMinimal } from '@/components/icons/logo';
 import Arrow from '@/components/icons/arrow';
 import { useEffect, useRef, useState } from 'react';
 import { useIsVisible } from '@/components/utils/visibility';
+import Link from 'next/link';
 
 export default function Home() {
 
@@ -33,7 +34,7 @@ export default function Home() {
             <div className='h-[2px] w-0 bg-white bottom-0 right-0 absolute animate-grow-width animation-delay-500'></div>
           </div>
           <h3 className='uppercase mt-7 mb-10 md:text-xl tracking-widest md:tracking-[0.225rem] animate-blend-in animation-delay-[1s] opacity-0'>Ein ganz besonderes Team</h3>
-          <button className='text-sm md:text-base px-10 py-3 bg-lipstick-800 tracking-widest rounded hover:bg-lipstick-700 uppercase animate-blend-in animation-delay-[1s] opacity-0'>Mitglied werden</button>
+          <Link href='/join' className='text-sm md:text-base px-10 py-3 bg-lipstick-800 tracking-widest rounded hover:bg-lipstick-700 uppercase animate-blend-in animation-delay-[1s] opacity-0'>Mitglied werden</Link>
           <div className={`text-center p-2 bottom-0 absolute  translate-y-[10em] transition-opacity delay-200 duration-400 animate-slide-up animation-delay-[5s] ${showArrow ? 'opacity-100' : 'opacity-0'}`}>
             <div className='uppercase tracking-wide m-3 text-xs md:text-base'>Mehr erfahren</div>
             <Arrow className='block m-auto mb-3'/>

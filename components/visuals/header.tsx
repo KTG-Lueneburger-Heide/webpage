@@ -9,8 +9,8 @@ import { faBars,faClose, faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 type MenuProps = {
   items :{
-    name: String,
-    link: String
+    name: string,
+    link: string
   }[]
 }
 
@@ -28,7 +28,9 @@ const Menu = ( { items } : MenuProps) => {
           <div className='p-4 text-right text-lg'>
             <FontAwesomeIcon icon={faClose}  onClick={() => setExpanded(false)}/>
           </div>
+          {items.map( (m,i) => <div key={i}><Link href={m.link} onClick={(e) => setExpanded(false)}>{m.name}</Link></div>)}
         </div>
+        
     </nav>
   )
 }
@@ -36,8 +38,8 @@ const Menu = ( { items } : MenuProps) => {
 export default function Header({transparent=true}) {
 
   const menuItems = [
-    {name: "Home", link: "index.html"},
-    {name: "Team", link: "team.html"},
+    {name: "Home", link: "/"},
+    {name: "Team", link: "/team"},
     {name: "Aktuelles", link: "#"}
   ]
   //${transparent ? "bg-transparent" : "bg-lipstick-950"}

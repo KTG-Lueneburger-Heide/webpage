@@ -29,7 +29,7 @@ export default async function TeamPage() {
 
   const boardMembers = await fetchBoardMembers();
 
-  console.log(boardMembers)
+  // console.log(`Number of contacts in group [Vorstand]: ${boardMembers.length}`);
 
   return (
     <div className="w-screen min-h-screen landscape:parallax-team portrait:parallax-team-portrait pt-20 lg:pt-32 pb-20 text-center">
