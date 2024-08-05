@@ -9,7 +9,7 @@ const nextConfig = {
  
     return config
   },
-  // output: 'export',
+  output: 'export',
   distDir: 'dist'
 };
 
