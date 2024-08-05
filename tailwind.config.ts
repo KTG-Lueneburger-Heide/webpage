@@ -129,16 +129,16 @@ const config: Config = {
       matchUtilities(
         {
           parallax: (value) => ({
-            '@supports  (-webkit-touch-callout : none)': {
+            '@supports not (-webkit-touch-callout : none)': {
               backgroundImage: value,
               backgroundAttachment: 'fixed',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
             },
-            '@supports not (-webkit-touch-callout : none)': {
+            '@supports (-webkit-touch-callout : none)': {
               '&::before': {
-                content: '""',
+                content: '"a"',
                 position: 'fixed',
                 top: '0',
                 left: '0',
@@ -147,6 +147,7 @@ const config: Config = {
                 backgroundImage: value,
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
+                backgroundAttachment: 'scroll',
                 backgroundSize: 'cover',
                 zIndex: '0'
               },
