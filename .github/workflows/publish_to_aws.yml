@@ -36,4 +36,4 @@ jobs:
         aws-region: eu-central-1
     - name: Copy files to S3 with the AWS CLI
       run: |
-        aws s3 sync ./out s3://ktg-webpage/
+        aws s3 sync ./dist s3://ktg-webpage/
