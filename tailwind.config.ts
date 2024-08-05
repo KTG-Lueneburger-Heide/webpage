@@ -133,7 +133,11 @@ const config: Config = {
               backgroundAttachment: 'fixed',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover'
+              backgroundSize: 'cover',
+              '@supports(-webkit-touch-callout : none)': {
+                backgroundAttachment: 'scroll'
+              }
+
           })
         },
         { values: theme('backgroundImage') }
