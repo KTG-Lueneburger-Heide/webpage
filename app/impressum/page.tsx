@@ -17,7 +17,7 @@ export default function JoinPage() {
       <div className=""><h2 className="title inline-block">Impressum</h2></div>
       <HeaderTransparencyBorder />
       
-      <div className="text-left px-20">
+      <div className="text-left lg:px-20 px-5 relative">
       <h3 className="text-lg font-bold mt-10 mb-2">Anschrift</h3> 
       <p>Kunstturngemeinschaft Lüneburger Heide (Verein in Gründung)</p>
       
