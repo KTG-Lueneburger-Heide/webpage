@@ -39,7 +39,7 @@ export default function RootLayout({
         <footer>
           <Sponsors/>
           <SocialMedia/>
-          <ul className="pb-20 text-center uppercase tracking-widest bg-oxford-blue-900 text-oxford-blue-500">
+          <ul className="pb-20 text-center uppercase tracking-widest bg-oxford-blue-900 text-oxford-blue-500 relative">
             <li className="p-4"><Link href="/impressum">© 2024 KTG Lüneburger Heide</Link></li>
           </ul>
         </footer>

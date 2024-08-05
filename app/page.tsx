@@ -26,7 +26,7 @@ export default function Home() {
     <>        
       <Banner className="relative landscape:parallax-landing-landscape portrait:parallax-landing-portrait animate-blend-in animation-delay-200 opacity-0 overflow-hidden z-0 landscape:min-h-[750px]">
         <div className='w-screen h-screen flex justify-center items-center flex-col'>
-          <div className='w-3/4 md:w-[25em]'>
+          <div className='w-3/4 md:w-[25em] z-10'>
             <LogoMinimal style={{fill: "white"}}/>
           </div>
           <div className='relative max-h-[20%]'>
