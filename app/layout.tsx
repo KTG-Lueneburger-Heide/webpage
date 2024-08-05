@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/visuals/header";
 import Sponsors from "@/components/visuals/sponsors";
 import SocialMedia from "@/components/visuals/social";
+import Link from "next/link";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
@@ -39,7 +40,7 @@ export default function RootLayout({
           <Sponsors/>
           <SocialMedia/>
           <ul className="pb-20 text-center uppercase tracking-widest bg-oxford-blue-900 text-oxford-blue-500">
-            <li className="p-4">© 2024 KTG Lüneburger Heide</li>
+            <li className="p-4"><Link href="/impressum">© 2024 KTG Lüneburger Heide</Link></li>
           </ul>
         </footer>
       </body>
