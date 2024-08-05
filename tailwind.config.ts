@@ -149,7 +149,7 @@ const config: Config = {
                 backgroundRepeat: 'no-repeat',
                 backgroundAttachment: 'scroll',
                 backgroundSize: 'cover',
-                zIndex: '0'
+                zIndex: '-1' /* put behind the content */
               },
               background: 'transparent'
             }
