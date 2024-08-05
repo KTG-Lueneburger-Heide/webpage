@@ -13,13 +13,16 @@ export default function JoinPage() {
         <div className="group-has-[.isSubmitted]:hidden has-[.isSubmitting]:hidden has-[.hasError]:hidden flex items-center">
           <BalanceBeam className="h-[20em] w-[30em] portrait:hidden"/>
           <div>
-            <p className="tracking-wider landscape:px-10 text-base lg:text-2xl portrait:text-center">
+            {/* <p className="tracking-wider landscape:px-10 text-base lg:text-2xl portrait:text-center">
               Schicke uns einfach eine eMail Adresse, unter der wir dich erreichen können. Wir verabreden dann einen Termin zum <b>Probetraining</b>, bei dem ihr mal Traingingsluft schnuppern könnt, 
               und bei dem wir dann alles Weitere besprechen.
             </p>
             <div className="m-10 portrait:mx-0">
               <TrialRequestForm />
-            </div>
+            </div> */}
+            <p className="tracking-wider landscape:px-10 text-base lg:text-2xl portrait:text-center">
+              Habe noch ein wenig Geduld. Wir bauen die Vereinsstrukturen gerade auf. Schau einfach in ein bis zwei Wochen nochmal vorbei.
+            </p>
           </div>
         </div>
         <div className="hidden w-full group-has-[.isSubmitting]:flex justify-center">

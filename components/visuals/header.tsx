@@ -48,9 +48,9 @@ export default function Header({transparent=true}) {
 
   const menuItems = [
     {name: "Home", link: "/"},
-    {name: "Team", link: "/team"},
-    {name: "Aktuelles", link: "#"}
+    {name: "Team", link: "/team"}
   ]
+  
   //${transparent ? "bg-transparent" : "bg-lipstick-950"}
   return (
     <header id="header" className={`fixed top-0 left-0 w-screen opacity-0 animate-blend-in animation-delay-200 z-20`}>
