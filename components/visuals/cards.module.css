@@ -147,6 +147,7 @@
   padding-bottom: 0;
   font-size: small;
   line-height: 1.3em;
+  color: theme(colors.oxford-blue.200);
 }
 
 .card .contentBx .team {
@@ -180,6 +181,7 @@
   opacity: 1;
   visibility: visible;
   transition-delay: 0.6s;
+  
 }
 
 @media screen and (hover:none) {
@@ -198,7 +200,7 @@
 
 .card .contentBx .team h3,
 .card .contentBx .description h3{
-  color: #fff;
+  color: theme(colors.oxford-blue.100);
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 2px;

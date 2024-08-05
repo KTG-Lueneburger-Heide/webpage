@@ -28,6 +28,9 @@ export default function JoinPage() {
         <div className="hidden w-full group-has-[.isSubmitted]:flex flex-wrap justify-center items-center">
           <SuccessIcon /><div className="md:text-2xl mx-10 text-center my-10">Wir melden uns so schnell wie möglich bei euch</div>
         </div>
+        <div className="hidden w-full group-has-[.hasError]:flex flex-wrap justify-center items-center">
+          <div className="md:text-2xl mx-10 text-center my-10 text-lipstick-600">Ups. Da ist was schief gegangen.</div>
+        </div>
       </div> 
     </div>
   )
