@@ -138,7 +138,7 @@ const config: Config = {
             },
             '@supports (-webkit-touch-callout : none)': {
               '&::before': {
-                content: '"a"',
+                content: '""',
                 position: 'fixed',
                 top: '0',
                 left: '0',
