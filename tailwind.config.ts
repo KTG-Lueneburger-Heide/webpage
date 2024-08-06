@@ -90,7 +90,7 @@ const config: Config = {
         },
         'slide-up': {
           from: { transform: 'translateY(10em)'},
-          to: { transform: 'translate(0)'}
+          to: { transform: 'translateY(-4em)'}
         },
         'spin': {
           '0.00%' : {
