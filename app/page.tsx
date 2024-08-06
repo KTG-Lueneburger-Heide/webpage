@@ -29,6 +29,7 @@ export default function Home() {
           <div className='w-3/4 md:w-[25em] z-10'>
             <LogoMinimal style={{fill: "white"}}/>
           </div>
+          <HeaderTransparencyBorder />
           <div className='relative max-h-[20%]'>
             <div className='h-[2px] w-0 bg-white  top-0 left-0 absolute animate-grow-width animation-delay-500'></div>
             <h2 className='font-serif text-xl md:text-4xl mx-7 mt-3 mb-2 md:mt-5 md:mb-4 opacity-0 animate-blend-scale animation-delay-500'>{Config.title}</h2>
@@ -42,7 +43,7 @@ export default function Home() {
         </div>
         </div>
       </Banner>
-      <HeaderTransparencyBorder />
+      
       {/* The next div is needed as an ugly hack. Visibility of the Splashes is used to remove the "more" arrow as soon as
         someone scrolls
        */}
