@@ -85,8 +85,8 @@ const config: Config = {
           to : { transform: 'scale(1)', opacity: '1' }
         },
         'blend-in': {
-          from : { opacity: '0'},
-          to : { opacity: '1' }
+          from : { opacity: '0', display: 'none'},
+          to : { opacity: '1', display: 'block' }
         },
         'slide-up': {
           from: { transform: 'translateY(10em)'},

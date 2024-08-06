@@ -16,7 +16,7 @@ import { HeaderTransparencyBorder } from '@/components/visuals/header';
 export default function Home() {
 
   const splashRef = useRef<HTMLDivElement>(null)
-  const isSplashVisible = useIsVisible(splashRef)
+  const isSplashVisible = useIsVisible(splashRef, false)
   const [showArrow,setShowArrow] = useState(true)
   useEffect( () => {
     if (showArrow && isSplashVisible) setShowArrow(false)
@@ -44,10 +44,6 @@ export default function Home() {
         </div>
       </Banner>
       
-      {/* The next div is needed as an ugly hack. Visibility of the Splashes is used to remove the "more" arrow as soon as
-        someone scrolls
-       */}
-      <div className='h-[2px] bg-white'/>
       <div ref={splashRef} className='z-10'>
         {splashes.map( (s,i) => <Splash splash={s} key={i}/>)}
       </div>

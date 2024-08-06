@@ -14,12 +14,11 @@
 
   header h1 {
     background-color: var(--background);
-    display: block;
+    visibility: visible;
     opacity: 1;
   }
 
 }
-
 
   .bgr-pink-splash {
     @apply bg-pink-splash-sm md:bg-pink-splash-md lg:bg-pink-splash-lg xl:bg-pink-splash-full
@@ -46,7 +45,7 @@ h2.title::after {
 
 :root {
   --foreground: white;
-  --background: #570035;
+  --background: theme(colors.lipstick.950);
   --color-primary-loading: theme(colors.lipstick.600);
   --color-secondary-loading: theme(colors.oxford-blue.200);
 }
