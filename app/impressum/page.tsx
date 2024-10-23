@@ -21,7 +21,7 @@ export default function JoinPage() {
       <h3 className="text-lg font-bold mt-10 mb-2">Anschrift</h3> 
       <p>Kunstturngemeinschaft Lüneburger Heide (Verein in Gründung)</p>
       
-      <p>E-Mail: kgt.lueneburger.heide@gmail.com</p>
+      <p>E-Mail: ktg.lueneburger.heide@gmail.com</p>
 
       <h3 className="text-lg font-bold mt-10 mb-2">Internetauftritt</h3>
 
