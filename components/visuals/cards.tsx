@@ -33,7 +33,7 @@ export default function TrainerCard( data : TrainerCardProps ) {
     return (
       <div className={styles.team}>
         <div className={styles.teamTitle}>Team{teams && teams.length > 1 ? "s" : ""}:</div>
-        { teams ? teams.map( (t,i) => <div className={styles.tag} key={i}>{t}</div> ) : <></> }
+        { teams ? teams.map( (t,i) => <div className={styles.tag}>{t}</div> ) : <></> }
       </div>
     )
   }

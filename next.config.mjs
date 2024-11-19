@@ -9,20 +9,6 @@ const nextConfig = {
     
     return config
   },
-  experimental: {
-    turbo: {
-      rules: {
-        '*.yaml': {
-          loaders: ['yaml-loader'],
-          as: '*.js'
-        },
-        '*.yml': {
-          loaders: ['yaml-loader'],
-          as: '*.js'
-        },
-      }
-    }
-  },
   output: 'export',
   distDir: 'dist'
 };
