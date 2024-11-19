@@ -16,6 +16,13 @@
   margin: 1em;
 }
 
+@media screen and (max-width: 390px) {
+  .card {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
 .card:before{
   content: '';
   position: absolute;
