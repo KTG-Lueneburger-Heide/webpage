@@ -3,7 +3,7 @@ import { RefObject, useEffect, useState } from "react";
 // Check visibility of elements 
 // Source: https://dev.to/jmalvarez/check-if-an-element-is-visible-with-react-hooks-27h8
 
-export function useIsVisible(ref : RefObject<Element>, initialValue = true, threshold = 0.1) {
+export function useIsVisible(ref : RefObject<Element | null>, initialValue = true, threshold = 0.1) {
     
   const [isIntersecting, setIntersecting] = useState(initialValue);
 
@@ -20,7 +20,7 @@ export function useIsVisible(ref : RefObject<Element>, initialValue = true, thre
 
 export type VisibilityObserverProps = {
   onVisibilityChange : (isVisible : boolean) => void,
-  ref : RefObject<Element>
+  ref : RefObject<Element | null>
 }
 export default function VisibilityObserver(
   { 
