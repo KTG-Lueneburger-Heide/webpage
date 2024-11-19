@@ -51,7 +51,7 @@ export default async function TeamPage() {
       <div className=""><h2 className="title inline-block">Unser Team</h2></div>
       <h3 className="text-2xl text-oxford-blue-200 uppercase tracking-widest font-bold mb-6 opacity-0 animate-blend-in animation-delay-1000">Trainerinnen</h3>
       <HeaderTransparencyBorder/>
-      <div className="relative flex flex-wrap justify-center font-poppins mx-1 lg:mx-10 xl:mx-20 2xl:mx-48 opacity-0 animate-blend-in animation-delay-1000">
+      <div className="relative flex flex-wrap justify-center font-poppins mx-1 lg:mx-10 xl:mx-20 2xl:mx-48 opacity-0 animate-blend-in-flex animation-delay-1000">
         {trainer.map( (t,i) => <TrainerCard {...t} key={i}/>)}
       </div>
       { boardMembers.length > 0 ? <Vorstand/> : <></> }

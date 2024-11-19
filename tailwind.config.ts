@@ -88,6 +88,10 @@ const config: Config = {
           from : { opacity: '0', display: 'none'},
           to : { opacity: '1', display: 'block' }
         },
+        'blend-in-flex': {
+          from : { opacity: '0', display: 'none'},
+          to : { opacity: '1', display: 'flex' }
+        },
         'slide-up': {
           from: { transform: 'translateY(10em)'},
           to: { transform: 'translateY(-4em)'}
@@ -112,6 +116,7 @@ const config: Config = {
         'grow-width': "grow-width 0.85s ease forwards",
         'blend-scale': "blend-scale 0.5s forwards",
         'blend-in': "blend-in 0.5s forwards",
+        'blend-in-flex': "blend-in-flex 0.5s forwards",
         'slide-up': "slide-up 2s forwards"
       },
       animationDelay: {
