@@ -19,7 +19,7 @@ export default function JoinPage() {
       
       <div className="text-left lg:px-20 px-5 relative animate-blend-in animation-delay-400 opacity-0">
       <h3 className="text-lg font-bold mt-10 mb-2">Anschrift</h3> 
-      <p>Kunstturngemeinschaft Lüneburger Heide e.V.</p>
+      <p>Kunstturngemeinschaft Lüneburger Heide (Verein in Gründung)</p>
       
       <p>E-Mail: ktg.lueneburger.heide@gmail.com</p>
 
