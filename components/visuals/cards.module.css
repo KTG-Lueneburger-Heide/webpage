@@ -42,7 +42,9 @@
 }
 
 .blue {
-  
+  --circle-color: #003c75;
+  --tag-color: rgba(25, 23, 86, 0.2);
+  --license-color: #008de4;
 }
 
 .card:before{
