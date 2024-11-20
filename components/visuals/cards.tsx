@@ -39,7 +39,8 @@ export default function TrainerCard( data : TrainerCardProps ) {
   }
 
   return (
-    <div className={`${styles.card} ${styles.gold}`}>
+    // Add here color styles
+    <div className={`${styles.card}`}>  
         { data.license ? <LicenseBatch type={data.license} /> : <></>}
         <div className={styles.imgBx}>
           { data.image ? <Picture url={data.image} /> : <></>}
