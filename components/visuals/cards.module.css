@@ -1,11 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@property --circle-color {
+  syntax: "<color>";
+  initial-value: #7c1c9f;
+  inherits: true;
+}
 
-.card{
-  --circle-color: #7c1c9f;
-  --tag-color: rgba(240, 25, 255, 0.1);
-  --license-color: #ee4add;
+@property --tag-color {
+  syntax: "<color>";
+  initial-value: rgba(240, 25, 255, 0.1);
+  inherits: true;
+}
 
+@property --license-color {
+  syntax: "<color>";
+  initial-value: #ee4add;
+  inherits: true;
+}
+
+.card {
   font-family: 'Poppins', sans-serif;
   position: relative;
   width: 300px;
@@ -14,6 +27,22 @@
   border-radius: 20px;
   overflow: hidden;
   margin: 1em;
+}
+
+.silver {
+  --circle-color: #A6AEBF;
+  --tag-color: rgba(166, 174, 191, 0.1);
+  --license-color: #A6AEBF;
+}
+
+.gold {
+  --circle-color: #755200;
+  --tag-color: rgb(235, 91, 0, 0.1);
+  --license-color: #E4003A;
+}
+
+.blue {
+  
 }
 
 .card:before{
