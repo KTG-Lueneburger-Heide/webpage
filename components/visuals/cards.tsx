@@ -33,7 +33,7 @@ export default function TrainerCard( data : TrainerCardProps ) {
     return (
       <div className={styles.team}>
         <div className={styles.teamTitle}>Team{teams && teams.length > 1 ? "s" : ""}:</div>
-        { teams ? teams.map( (t,i) => <div className={styles.tag} key="i">{t}</div> ) : <></> }
+        { teams ? teams.map( (t,i) => <div className={styles.tag} key={i}>{t}</div> ) : <></> }
       </div>
     )
   }
@@ -59,10 +59,11 @@ export default function TrainerCard( data : TrainerCardProps ) {
 
 export type ContactCardProps = {
   name: string,
-  image: string
+  image?: string,
+  text?: string
 }
 
-export function ContactCard( {name,image} : ContactCardProps ) {
+export function ContactCard( {name,image,text} : ContactCardProps ) {
 
   const Picture = ( {url} : {url: string} ) => {
     return (
@@ -77,6 +78,7 @@ export function ContactCard( {name,image} : ContactCardProps ) {
         </div>
         <div className={styles.contentBx}>
           <h2>{ name }</h2>
+            { text ? <div className={styles.text}>{text}</div> : <></> }
         </div>
       </div>  
   )
