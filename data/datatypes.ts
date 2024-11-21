@@ -27,6 +27,12 @@ export type Trainer = {
   image?: string
 }
 
+export type Vorstand = {
+  name: string,
+  image?: string,
+  position: string
+}
+
 export type ContactRecord = {
   type: string,
   tags: string[],
