@@ -1,9 +1,12 @@
 - name: Kristina von Tronchin
   position: 1. Vorsitzende
+  image: /images/people/placeholder-female.jpg
 - name: Birgit Kruse
   position: 2. Vorsitzende
   image: /images/people/kruse_birgit.png
 - name: Alexander Bausch
   position: Kassenwart
+  image: /images/people/placeholder-male.jpg
 - name: Antje Kramer
   position: Geschäftsführerin
+  image: /images/people/placeholder-female.jpg
