@@ -7,27 +7,9 @@
 @media screen and (hover:none) {
   .container {
     overflow-y: scroll;
-    scrollbar-width: none; 
-    height: 65dvh;
+    scrollbar-width: none;
+    height: calc(100dvh - 13.5rem);
     padding-top: 1em;
     mask: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 3%, rgba(0,0,0,1) 97%, rgba(0,0,0,0) 100%)
-  }
-}
-
-@media screen and (hover:none) and (min-height:800px) {
-  .container {
-    height: 70dvh;
-  }
-}
-
-@media screen and (hover:none) and (min-height:900px) {
-  .container {
-    height: 73dvh;
-  }
-}
-
-@media screen and (hover:none) and (min-height:1000px) {
-  .container {
-    height: 75dvh;
   }
 }

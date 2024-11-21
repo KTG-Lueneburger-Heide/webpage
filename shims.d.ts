@@ -26,6 +26,13 @@ declare module '*/trainer.yaml' {
   export default data;
 }
 
+declare module '*/vorstand.yaml' {
+  import type { Vorstand } from '@/data/datatypes';
+  const data : Vorstand [];
+
+  export default data;
+}
+
 declare module '*.yaml' {
   const json: any;
   export default json;

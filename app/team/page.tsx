@@ -43,23 +43,21 @@ import styles from './page.module.css';
 export default function TeamPage() {
 
   // const boardMembers = await fetchBoardMembers();
-  const boardMembers : ContactRecord[] = [] ;
-
   // console.log(`Number of contacts in group [Vorstand]: ${boardMembers.length}`);
 
   const Vorstand = () => (
     <>
-      <h3 className="text-2xl text-oxford-blue-200 uppercase tracking-widest font-bold mb-6 opacity-0 animate-blend-in animation-delay-1000">Vorstand</h3>
+      <h3 className="text-2xl h-10 text-oxford-blue-200 uppercase tracking-widest font-bold opacity-0 animate-blend-in animation-delay-1000">Vorstand</h3>
       <div className={`${styles.container} relative flex flex-wrap justify-center items-center font-poppins mx-0 lg:mx-10 xl:mx-20 2xl:mx-48 opacity-0 animate-blend-in animation-delay-1000`}>
         {/* {vorstand.map( (t,i) => <ContactCard name={t.personal.humanNameShort} image={`https://api.campai.com/storage/download/${t.personal.avatar?.path}`} key={i}/>)}  */}
-        {vorstand.map( (t,i) => <ContactCard name={t.name} image={t.image} text={t.position}key={i}/>)}
+        {vorstand.map( (t,i) => <ContactCard name={t.name} image={t.image} text={t.position} key={i}/>)}
       </div>
     </>
   )
 
   const Trainer = () => (
     <>
-      <h3 className="text-2xl text-oxford-blue-200 uppercase tracking-widest font-bold mb-6 opacity-0 animate-blend-in animation-delay-1000">Trainerinnen</h3>
+      <h3 className="text-2xl h-10 text-oxford-blue-200 uppercase tracking-widest font-bold opacity-0 animate-blend-in animation-delay-1000">Trainerinnen</h3>
       <div className={`${styles.container} relative flex flex-wrap justify-center font-poppins mx-0 lg:mx-10 xl:mx-20 2xl:mx-48 opacity-0 animate-blend-in-flex animation-delay-1000`}>
         {trainer.map( (t,i) => <TrainerCard {...t} key={i}/>)}
       </div>
@@ -67,8 +65,8 @@ export default function TeamPage() {
   )
 
   return (
-    <div className="w-screen h-screen landscape:parallax-team portrait:parallax-team-portrait pt-20 lg:pt-32 pb-20 text-center backdrop-opacity-15">
-      <div className=""><h2 className="title inline-block">Unser Team</h2></div>
+    <div className="w-screen min-h-screen landscape:parallax-team portrait:parallax-team-portrait pt-20 lg:pt-32 pb-20 text-center">
+      <div className="h-20 sm:h-auto"><h2 className="title inline-block">Unser Team</h2></div>
       <HeaderTransparencyBorder/>
       <Swiper className={styles.swiper}
               modules={[Navigation]}
