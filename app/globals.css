@@ -18,6 +18,10 @@
     opacity: 1;
   }
 
+  div.section {
+    background-color: black;
+  }
+
 }
 
   .bgr-pink-splash {

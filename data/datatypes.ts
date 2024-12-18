@@ -36,6 +36,7 @@ export type Vorstand = {
 export type ContactRecord = {
   type: string,
   tags: string[],
+  _id: string,
   personal: {
     avatar?: {
       filename: string,
@@ -49,9 +50,26 @@ export type ContactRecord = {
     isPerson: boolean,
     isOrganisation: boolean,
     name: string,
+    type: string,
     humanNameShort: string,
     personFirstName: string,
     personLastName: string,
-    _id: string
-  }
+  },
+  custom: any
+}
+
+export type CustomFieldDefinition = {
+  key: string,
+  name: string,
+  type: string,
+  usageCount: number,
+  contributionUsageCount: number
+}
+
+export type CustomFieldGroup = {
+  name: string,
+  organisation: string,
+  type: string,
+  contactType: string,
+  customFields: CustomFieldDefinition[]
 }

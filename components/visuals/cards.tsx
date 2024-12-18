@@ -1,6 +1,7 @@
 import ReactMarkdown from "react-markdown"
 
 import styles from "./cards.module.css"
+import Image from 'next/image'
 
 export type TrainerCardProps = {
   name: string,
@@ -67,7 +68,7 @@ export function ContactCard( {name,image,text} : ContactCardProps ) {
 
   const Picture = ( {url} : {url: string} ) => {
     return (
-      <><img src={url} loading="lazy"/></>
+      <><Image src={url} loading="lazy" alt={name} width={320} height={320}/></>
     )
   }
 

@@ -10,7 +10,13 @@ const nextConfig = {
     return config
   },
   output: 'export',
-  distDir: 'dist'
+  distDir: 'dist',
+  images: { 
+    unoptimized: true 
+  },
+  serverRuntimeConfig: {
+    PROJECT_ROOT: import.meta.dirname
+  }
 };
 
 export default nextConfig;
