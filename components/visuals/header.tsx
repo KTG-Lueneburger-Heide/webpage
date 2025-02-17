@@ -1,7 +1,7 @@
 "use client"
 
 import Link from 'next/link';
-import GlobalConfig from "@/app/app.config.js"
+import GlobalConfig from "@/app/app.config"
 import { Suspense, useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars,faClose, faSpinner } from '@fortawesome/free-solid-svg-icons'

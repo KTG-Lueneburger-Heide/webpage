@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   title: "KTG Lüneburger Heide",
   logo: "/images/logos/KTG_Logo_Minimal_Inv.svg",
   campai: {
@@ -6,6 +6,8 @@ module.exports = {
     endpoint: "https://api.campai.com/",
     organistationID: "669a225b343dd79261141488",
     trial_form_id: "669e52f5f1becc0ed53c7351"
-
+  },
+  api: {
+    endpoint: "https://api.ktg-lueneburger-heide.de/dev"
   }
 }

@@ -15,35 +15,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import styles from './page.module.css';
 
-// async function fetchBoardMembers() : Promise<ContactRecord[]> {
-
-//   const headers : HeadersInit = {
-//     'Content-Type': 'application/json',
-//     "Authorization": Config.campai.api_key as string,
-//   }
-
-//   const query = new URLSearchParams({
-//     'organisation': Config.campai.organistationID,
-//     'tags': 'in:Vorstand'
-//   })
-
-//   const res = await fetch(path.join( Config.campai.endpoint, `/contacts?${query}`), {
-//     headers: headers
-//   })
-
-//   return res.json() as Promise<ContactRecord[]>
-
-// }
-
-// async function fetchBoardMembers() : Promise<ContactRecord[]> {
-//   // Dummy fetch returning an empty array
-//   return new Promise<ContactRecord[]>( (resolve) => resolve([]) )
-// }
 
 export default function TeamPage() {
-
-  // const boardMembers = await fetchBoardMembers();
-  // console.log(`Number of contacts in group [Vorstand]: ${boardMembers.length}`);
 
   const Vorstand = () => (
     <>
