@@ -1,6 +1,7 @@
 import { BalanceBeam } from "@/components/icons/gymnasts"
 import LoadingIcon, { SuccessIcon } from "@/components/icons/loading"
 import { HeaderTransparencyBorder } from "@/components/visuals/header"
+import Link from "next/link"
 import { PropsWithChildren } from "react"
 
 export default function JoinPage() {
@@ -22,6 +23,10 @@ export default function JoinPage() {
       <p>Kunstturngemeinschaft Lüneburger Heide e.V.</p>
       
       <p>E-Mail: info@ktg-lueneburger-heide.de</p>
+
+      <h3 className="text-lg font-bold mt-10 mb-2">Satzung</h3>
+
+      Die Satzung des Vereins kann <Link className="underline underline-offset-2" href="/docs/20240724_Satzung_KTG_Final.pdf">hier heruntergeladen</Link> werden.
 
       <h3 className="text-lg font-bold mt-10 mb-2">Internetauftritt</h3>
 
