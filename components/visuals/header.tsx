@@ -48,7 +48,8 @@ export default function Header({transparent=true}) {
 
   const menuItems = [
     {name: "Home", link: "/"},
-    {name: "Team", link: "/team"}
+    {name: "Team", link: "/team"},
+    {name: "Mitglieder", link: "/members"}
   ]
   
   //${transparent ? "bg-transparent" : "bg-lipstick-950"}
