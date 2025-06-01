@@ -1,5 +1,5 @@
 - name: Birgit Kruse
-  img: images/people/kruse_birgit.png
+  image: /images/people/kruse_birgit.png
   text: |
     Trainerin A Gerätturnen weiblich
     - Gesundheitsmanagerin (B.A.)  
@@ -12,7 +12,7 @@
   - AK 10
 
 - name: Annika Rücker
-  img: images/people/ruecker_annika.png
+  image: /images/people/ruecker_annika.png
   text: |
     Trainerin B Gerätturnen weiblich
     
@@ -26,7 +26,7 @@
   - Kür
 
 - name: Christina Kruse
-  img: images/people/kruse_christina_2.png
+  image: /images/people/kruse_christina_2.png
   text: |
     Trainerin B Gerätturnen weiblich
 
@@ -38,7 +38,7 @@
   - LZ
 
 - name: Nora Niblett
-  img: images/people/niblett_nora.png
+  image: /images/people/niblett_nora.png
   teams:
   - AK 8
   text:
@@ -52,11 +52,11 @@
     - Nachwuchs 
 
 - name: Lilly Dittmann
-  img: images/people/dittmann_lilly.png
+  image: /images/people/dittmann_lilly.png
   text: |
     Trainingsunterstützung
 
 - name: Alina Borisova
-  img: images/people/borisova_alina.png
+  image: /images/people/borisova_alina.png
   text: |
     Trainingsunterstützung

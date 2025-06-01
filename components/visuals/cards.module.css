@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@property --circle-color {
+  syntax: "<color>";
+  initial-value: #7c1c9f;
+  inherits: true;
+}
+
+@property --tag-color {
+  syntax: "<color>";
+  initial-value: rgba(240, 25, 255, 0.1);
+  inherits: true;
+}
+
+@property --license-color {
+  syntax: "<color>";
+  initial-value: #ee4add;
+  inherits: true;
+}
+
+.card {
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  width: 300px;
+  height: 470px;
+  background: #232323;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 1em;
+}
+
+.silver {
+  --circle-color: #A6AEBF;
+  --tag-color: rgba(166, 174, 191, 0.1);
+  --license-color: #A6AEBF;
+}
+
+.gold {
+  --circle-color: #755200;
+  --tag-color: rgb(235, 91, 0, 0.1);
+  --license-color: #E4003A;
+}
+
+.blue {
+  --circle-color: #003c75;
+  --tag-color: rgba(25, 23, 86, 0.2);
+  --license-color: #008de4;
+}
+
+.card:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--circle-color);
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+
+.card:hover:before{
+  clip-path: circle(300px at 80% -20%);
+}
+
+@media (hover: none) {
+.card:before{
+    clip-path: circle(300px at 80% -20%);
+  }
+}
+
+.card:after{
+  content: 'KTG';
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-weight: 800;
+  font-size: 10em;
+  font-family: "Alkatra", system-ui;
+  font-style: italic;
+  color: var(--tag-color)
+}
+
+.card h2,
+.contact h2 {
+  font-size: 1.5em;
+}
+
+.card li {
+  list-style: disc;
+  margin-left: 1em;
+}
+
+.card .imgBx{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+
+.card:hover .imgBx{
+  top: 0%;
+  transform: translateY(0%);
+}
+
+@media screen and (hover:none) {
+  .card .imgBx{
+    top: 0%;
+    transform: translateY(0%);
+  }
+}
+
+.card .imgBx img {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 270px;
+}
+
+.card .imgBx .line {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  transform: translate(10%, 0%);
+  
+  
+}
+
+.card .contentBx { 
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 0.6s;
+  z-index: 10;
+}
+
+.card:hover .contentBx{
+  height: 230px;
+}
+
+@media screen and (hover:none) {
+  .card .contentBx{
+    height: 230px;
+  }
+}
+
+.card .contentBx h2{
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  margin: 0;
+  font-family: "Alkatra", system-ui;
+}
+
+.card .contentBx p{
+  margin: 0 0 0.5em;
+}
+
+.card .contentBx .team, 
+.card .contentBx .description {
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: 0.5s;opacity: 0;
+  visibility: hidden;
+  padding-top: 1em;
+  padding-bottom: 0;
+  font-size: small;
+  line-height: 1.3em;
+  color: theme(colors.oxford-blue.200);
+}
+
+.card .contentBx .team {
+  display: flex;
+}
+
+.card .contentBx .team .teamTitle{
+  margin: 0 5px;
+}
+
+.card .contentBx .team, 
+.card .contentBx .description ul {
+  text-align: left;
+  margin-left: 1em;
+
+}
+.card .contentBx .team, 
+.card .contentBx .description h3,
+.card .contentBx .description h2 {
+  margin-bottom: 0.3em;
+  padding-top: 0.0em;
+}
+
+.card:hover .contentBx .team{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+
+.card:hover .contentBx .description {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+  
+}
+
+@media screen and (hover:none) {
+
+  .card .contentBx .team{
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .card .contentBx .description {
+    opacity: 1;
+    visibility: visible;
+  }
+
+}
+
+.card .contentBx .team h3,
+.card .contentBx .description h3{
+  color: theme(colors.oxford-blue.100);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+
+.card .contentBx .team .tag {
+  width: 56px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card .contentBx .team .tag:hover {
+  background: #9bdc28;
+}
+
+.card .contentBx a{
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+  margin-top: 0;
+}
+
+.card:hover .contentBx a{
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
+  
+}
+
+.card .license {
+  position: absolute;
+  right: 0%;
+  transform: translateX(4.5em) translateY(-2.0em) rotate(45deg);
+  background-color: var(--license-color);
+  text-align: center;
+  vertical-align: bottom;
+  width: 10em;
+  line-height: 1.1em;
+  height: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 0.2em;
+}
+
+.card .license .type {
+  font-weight: bold;
+}
+
+.contact {
+  --circle-color: #7c1c9f;
+  --tag-color: rgba(240, 25, 255, 0.1);
+  --license-color: #ee4add;
+
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  width: 300px;
+  height: 345px;
+  background: #232323;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 1em;
+}
+
+.contact .text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+}
+.contact .imgRoundBx {
+  /* margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px; */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  height: 270px;
+}
+.contact .imgRoundBx img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 270px;
+  min-width: 270px;
+  width: auto;
+  object-fit: cover;
+}
+.contact .imgRoundBx::after {
+  content: '';
+  background-color: #fff;
+  height: 2px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top:100%;
+  transform: translate(0px,-2px); 
+}
+.contact .contentBx h2{
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  margin: 0;
+  font-family: "Alkatra", system-ui;
+  margin-top: 0.5em;
+}
