@@ -26,15 +26,14 @@ export default function TrialRequestForm() {
 
       const headers = new Headers();
       headers.append("Content-Type", "application/json")
-      const res = await fetch(path.join(Config.api.endpoint, "contact"), {
-        method: "POST",
-        headers: headers,
-        body: payload
-      })
-
-      if (res.ok) {
+      try {
+        const res = await fetch(new URL("/v1/contact", Config.api.endpoint), {
+          method: "POST",
+          headers: headers,
+          body: payload
+        })
         setFormState(FormState.SUBMITTED)
-      } else {
+      } catch (err) {
         setFormState(FormState.ERROR)
       }
     }

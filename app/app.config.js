@@ -9,7 +9,7 @@ module.exports = {
 
   },
   api: {
-    endpoint: "https://api.ktg-lueneburger-heide.de/v1"
+    endpoint: "https://api.ktg-lueneburger-heide.de"
   }
 
 }
