@@ -6,59 +6,51 @@ import Config from '@/app/app.config'
 
 import path from 'path'
 
+enum FormState {SUBMITTED, SUBMITTING, ERROR, INITIAL}
+
 export default function TrialRequestForm() {
 
-  const [submitted, setSubmitted] = useState(false)
-  const [error, setError] = useState(false)
-  const [submitting, setSubmitting] = useState(false)
-
+  const [formState, setFormState] = useState(FormState.INITIAL)
 
   const Form = () => {
 
     const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
 
-    const submitFormData = () => {
+    const submitFormData = async () => {
 
       const payload = JSON.stringify({
-        formData :{Frage1: email}
+        email : email,
+        message: message
       })
 
-      /*
-        We use the older XHR API here, because the new fetch API could not properly 
-        implement CORS. This is probably due to a misspelled header value (Access-Control-Request-Headers: "contenttype" instead of "content-type")
+      const headers = new Headers();
+      headers.append("Content-Type", "application/json")
+      const res = await fetch(path.join(Config.api.endpoint, "contact"), {
+        method: "POST",
+        headers: headers,
+        body: payload
+      })
 
-        For reference, the fetch API implementation would look like this:
-          
-          const headers = new Headers();
-          headers.append("Content-Type", "application/json")
-          return fetch(path.join(Config.campai.endpoint, "formSubmissions", Config.campai.trial_form_id), {
-            method: "POST",
-            headers: headers,
-            body: payload
-          })
-      */
-      const xhr = new XMLHttpRequest(); 
-      xhr.open('POST', path.join(Config.campai.endpoint, "formSubmissions", Config.campai.trial_form_id))
-      xhr.setRequestHeader("Content-Type", "application/json")
-      xhr.onload = (e) => {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-          setSubmitting(false)
-          setSubmitted(true)
-        } else {
-          setSubmitting(false)
-          setError(true)
-        }
+      if (res.ok) {
+        setFormState(FormState.SUBMITTED)
+      } else {
+        setFormState(FormState.ERROR)
       }
-      xhr.send(payload)
     }
   
     const handleSubmission = async () => {
-      setSubmitting(true)
+      setFormState(FormState.SUBMITTING)
       submitFormData()
     }
 
     return (
-      <form className={`grid grid-rows-2 md:grid-rows-1 md:grid-cols-3 gap-5 ${submitting ? 'isSubmitting ' : ''} ${error ? 'hasError ' : ''} ${submitted ? 'isSubmitted ' : ''}`} onSubmit={handleSubmission}>
+      <form className={`grid grid-rows-5 md:grid-rows-2 md:grid-cols-3 gap-5 ${formState == FormState.SUBMITTING ? 'isSubmitting ' : ''} ${formState === FormState.ERROR ? 'hasError ' : ''} ${formState === FormState.SUBMITTED ? 'isSubmitted ' : ''}`} onSubmit={handleSubmission}>
+        <textarea className="md:col-span-3 row-span-4 text-base md:text-2xl bg-opacity-10 bg-oxford-blue-300 p-2 border-white border-solid border-2 rounded-md" 
+                rows={6}
+                value={message}
+                onChange={(event) => setMessage(event.target.value)}
+                required />
         <input className="md:col-span-2 text-base md:text-2xl bg-opacity-10 bg-oxford-blue-300 p-2 border-white border-solid border-2 rounded-md invalid:[&:not(:placeholder-shown):not(:focus)]:border-lipstick-700 peer" 
                 type="email" 
                 placeholder="meine@email.de" 
@@ -66,11 +58,12 @@ export default function TrialRequestForm() {
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
                 required />
-        <button className="text-sm md:text-base bg-lipstick-800 hover:bg-lipstick-600 tracking-widest rounded peer-invalid:bg-black-300 peer-invalid:bg-opacity-30 peer-invalid:text-black-300 peer-invalid:pointer-events-none peer-invalid:cursor-pointer">Senden</button>
+        <button className="text-sm md:text-base bg-lipstick-800 hover:bg-lipstick-600 tracking-widest rounded peer-invalid:bg-black-300 peer-invalid:bg-opacity-30 peer-invalid:text-black-300 peer-invalid:pointer-events-none peer-invalid:cursor-pointer min-h-12">Senden</button>
       </form>
-      )}
+    )
+  }
 
   return (
-    <Form/> //!submitted ? <Form/> : <Thanks/>
+    <Form/>
   )
 }

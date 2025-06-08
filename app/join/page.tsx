@@ -3,6 +3,8 @@ import LoadingIcon, { SuccessIcon } from "@/components/icons/loading"
 import { HeaderTransparencyBorder } from "@/components/visuals/header"
 import TrialRequestForm from "@/components/visuals/trailrequest"
 
+import Link from 'next/link'
+
 export default function JoinPage() {
 
   return (
@@ -13,26 +15,31 @@ export default function JoinPage() {
         <div className="group-has-[.isSubmitted]:hidden has-[.isSubmitting]:hidden has-[.hasError]:hidden flex items-center">
           <BalanceBeam className="h-[20em] w-[30em] portrait:hidden"/>
           <div>
-            {/* <p className="tracking-wider landscape:px-10 text-base lg:text-2xl portrait:text-center">
-              Schicke uns einfach eine eMail Adresse, unter der wir dich erreichen können. Wir verabreden dann einen Termin zum <b>Probetraining</b>, bei dem ihr mal Traingingsluft schnuppern könnt, 
+            <p className="tracking-wider landscape:px-10 text-base lg:text-2xl portrait:text-center">
+              Schreibe uns eine kurze Nachricht und lass uns wissen, wer du bist und was dich interessiert. Wir verabreden dann einen Termin zum <b>Probetraining</b>, bei dem ihr mal Traingingsluft schnuppern könnt, 
               und bei dem wir dann alles Weitere besprechen.
             </p>
             <div className="m-10 portrait:mx-0">
               <TrialRequestForm />
-            </div> */}
-            <p className="tracking-wider landscape:px-10 text-base lg:text-2xl portrait:text-center">
+            </div>
+            {/* <p className="tracking-wider landscape:px-10 text-base lg:text-2xl portrait:text-center">
               Habe noch ein wenig Geduld. Wir bauen die Vereinsstrukturen gerade auf. Schau einfach in ein bis zwei Wochen nochmal vorbei.
-            </p>
+            </p> */}
           </div>
         </div>
         <div className="hidden w-full group-has-[.isSubmitting]:flex justify-center">
           <LoadingIcon />
         </div>
         <div className="hidden w-full group-has-[.isSubmitted]:flex flex-wrap justify-center items-center">
-          <SuccessIcon /><div className="md:text-2xl mx-10 text-center my-10">Wir melden uns so schnell wie möglich bei euch</div>
+          <SuccessIcon /><div className="md:text-2xl mx-10 text-center my-10">Vielen Dank für deine Nachricht. Wir melden uns so schnell wie möglich bei euch</div>
         </div>
         <div className="hidden w-full group-has-[.hasError]:flex flex-wrap justify-center items-center">
-          <div className="md:text-2xl mx-10 text-center my-10 text-lipstick-600">Ups. Da ist was schief gegangen.</div>
+          <div className="md:text-2xl mx-10 text-center my-10 text-lipstick-400">Ups. Da ist was schief gegangen. 
+            Bitte versuche es noch einmal, oder schicke uns eine Email an
+          </div>
+          <div className="text-oxford-blue-200 font-bold">
+            <Link href="mailto:info@ktg-lueneburger-heide.de">info@ktg-lueneburger-heide.de</Link>
+          </div>
         </div>
       </div> 
     </div>

@@ -7,5 +7,9 @@ module.exports = {
     organistationID: "669a225b343dd79261141488",
     trial_form_id: "669e52f5f1becc0ed53c7351"
 
+  },
+  api: {
+    endpoint: "https://api.ktg-lueneburger-heide.de/v1"
   }
+
 }
