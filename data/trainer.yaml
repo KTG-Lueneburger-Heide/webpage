@@ -16,7 +16,7 @@
   text: |
     Trainerin B Gerätturnen weiblich
     
-    ### Trainingsschwerpunkte:
+    ### Trainingsschwerpunkte
 
     - Kür Spitze
     - Kür modifiziert
@@ -30,9 +30,9 @@
   text: |
     Trainerin B Gerätturnen weiblich
 
-    ### Trainingsschwerpunkt:
+    ### Trainingsschwerpunkt
     
-    - Choreographie
+    Choreographie
   license: B
   teams:
   - LZ
@@ -41,22 +41,23 @@
   text: |
     Trainerin B Gerätturnen weiblich
 
-    ### Trainingsschwerpunkt:
+    ### Trainingsschwerpunkt
     
-    - Nachwuchs
+    Nachwuchs
   license: B
   image: /images/people/placeholder-female-transparent.png
   teams:
-  - Nachwuchs
+  - AK 6
 
 - name: Bianca Kaisik
   license: C
   text: |
     Trainerin C Gerätturnen weiblich
 
-    ### Trainingsschwerpunkt:
+    ### Trainingsschwerpunkt
     
-    - Breitensport "Happy Colors"
+    Breitensport "Happy Colors"
+
   image: /images/people/placeholder-female-transparent.png
   teams: 
     - HC
@@ -77,18 +78,20 @@
   image: /images/people/placeholder-female-transparent.png
   text: |
     Übungsleiterin
+    
     ### Trainingsschwerpunkt
     
-    - Nachwuchs 
+    Nachwuchs 
 
 - name: Johanna Kaisik
   image: /images/people/placeholder-female-transparent.png
   text: |
     Übungsleiterin
 
-    ### Trainingsschwerpunkt:
+    ### Trainingsschwerpunkt
     
-    - Breitensport "Happy Colors"
+    Breitensport "Happy Colors"
+
   teams: 
     - HC
 
@@ -96,9 +99,10 @@
   text: |
     Übungsleiterin
 
-    ### Trainingsschwerpunkt:
+    ### Trainingsschwerpunkt
     
-    - Breitensport "Happy Colors"
+    Breitensport "Happy Colors"
+    
   image: /images/people/placeholder-female-transparent.png
   teams: 
     - HC
