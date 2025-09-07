@@ -37,26 +37,78 @@
   teams:
   - LZ
 
+- name: Lisa Müller
+  text: |
+    Trainerin B Gerätturnen weiblich
+
+    ### Trainingsschwerpunkt:
+    
+    - Nachwuchs
+  license: B
+  image: /images/people/placeholder-female-transparent.png
+  teams:
+  - Nachwuchs
+
+- name: Bianca Kaisik
+  license: C
+  text: |
+    Trainerin C Gerätturnen weiblich
+
+    ### Trainingsschwerpunkt:
+    
+    - Breitensport "Happy Colors"
+  image: /images/people/placeholder-female-transparent.png
+  teams: 
+    - HC
+
 - name: Nora Niblett
   image: /images/people/niblett_nora.png
-  teams:
-  - AK 8
+  license: C
   text:
-    Übungsleiter
+    Trainerin C Gerätturnen weiblich
+
+- name: Fiona Brügge
+  image: /images/people/placeholder-female-transparent.png
+  license: C
+  text:
+    Trainerin C Gerätturnen weiblich
 
 - name: Tetiana Plaspohl
+  image: /images/people/placeholder-female-transparent.png
   text: |
-    Trainingsunterstützung
+    Übungsleiterin
     ### Trainingsschwerpunkt
     
     - Nachwuchs 
+
+- name: Johanna Kaisik
+  image: /images/people/placeholder-female-transparent.png
+  text: |
+    Übungsleiterin
+
+    ### Trainingsschwerpunkt:
+    
+    - Breitensport "Happy Colors"
+  teams: 
+    - HC
+
+- name: Wenke Bötcher
+  text: |
+    Übungsleiterin
+
+    ### Trainingsschwerpunkt:
+    
+    - Breitensport "Happy Colors"
+  image: /images/people/placeholder-female-transparent.png
+  teams: 
+    - HC
 
 - name: Lilly Dittmann
   image: /images/people/dittmann_lilly.png
   text: |
     Trainingsunterstützung
 
-- name: Alina Borisova
-  image: /images/people/borisova_alina.png
-  text: |
-    Trainingsunterstützung
+# - name: Alina Borisova
+#   image: /images/people/borisova_alina.png
+#   text: |
+#     Trainingsunterstützung
