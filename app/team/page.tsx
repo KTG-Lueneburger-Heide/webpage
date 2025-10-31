@@ -67,7 +67,7 @@ export default function TeamPage() {
                width='700' 
                height='300'/>
         </div>
-        <div className={`${styles.container} relative flex flex-wrap justify-center items-center font-poppins mx-0 lg:mx-10 xl:mx-20 2xl:mx-48 opacity-0 animate-blend-in animation-delay-1000`}>
+        <div className={` relative flex flex-wrap justify-center items-center font-poppins mx-0 lg:mx-10 xl:mx-20 2xl:mx-48 opacity-0 animate-blend-in animation-delay-1000`}>
           {vorstand.map((t, i) => <NameTag fullname={t.name} position={t.position} key={i}/>)}
         </div>
       </div>
