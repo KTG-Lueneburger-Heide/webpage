@@ -61,7 +61,7 @@ export default function TeamPage() {
         {vorstand.map( (t,i) => <ContactCard name={t.name} image={t.image} text={t.position} key={i}/>)}
       </div> */}
       <div className=' bg-black-950 bg-opacity-70 m-10 flex flex-col justify-center items-center rounded-xl pb-10'>
-        <div><Image src='/images/people/vorstand_2025.png' 
+        <div><Image src='/images/people/vorstand_2025_md.png' 
                className='border-b-2 border-white'
                alt="Vorstand" 
                width='700' 
