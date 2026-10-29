@@ -30,7 +30,8 @@ export type Trainer = {
 export type Vorstand = {
   name: string,
   image?: string,
-  position: string
+  position: string,
+  email?: string
 }
 
 export type ContactRecord = {
