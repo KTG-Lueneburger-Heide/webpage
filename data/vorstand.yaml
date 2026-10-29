@@ -1,16 +1,16 @@
-- name: Katja Lüdemann
-  position: Kassenwart
-  image: /images/people/placeholder-female.jpg
-  email: "mailto:katja.luedemann@ktg-lueneburger-heide.de"
-- name: Antje Kramer
-  position: Geschäftsführerin
-  image: /images/people/placeholder-female.jpg
-  email: "mailto:antje.kramer@ktg-lueneburger-heide.de"
-- name: Tetiana Plaspohl
-  position: 2. Vorsitzende
-  image: /images/people/placeholder-female.jpg.png
-  email: "mailto:tetiana.plaspohl@ktg-lueneburger-heide.de"
 - name: Michail Saatmann
   position: 1. Vorsitzende
   image: /images/people/placeholder-female.jpg
   email: "mailto:michail.saatmann@ktg-lueneburger-heide.de"
+- name: Tetiana Plaspohl
+  position: 2. Vorsitzende
+  image: /images/people/placeholder-female.jpg.png
+  email: "mailto:tetiana.plaspohl@ktg-lueneburger-heide.de"
+- name: Antje Kramer
+  position: Geschäftsführerin
+  image: /images/people/placeholder-female.jpg
+  email: "mailto:antje.kramer@ktg-lueneburger-heide.de"
+- name: Katja Lüdemann
+  position: Kassenwart
+  image: /images/people/placeholder-female.jpg
+  email: "mailto:katja.luedemann@ktg-lueneburger-heide.de"

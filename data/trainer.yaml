@@ -74,10 +74,17 @@
   text:
     Trainerin C Gerätturnen weiblich
 
+- name: Lisa Plaspohl
+  image: /images/people/placeholder-female-transparent.png
+  license: C
+  text: 
+    Trainerin C Gerätturnen weiblich
+
 - name: Tetiana Plaspohl
   image: /images/people/placeholder-female-transparent.png
+  license: C
   text: |
-    Übungsleiterin
+    Trainerin C Gerätturnen weiblich
     
     ### Trainingsschwerpunkt
     
@@ -109,6 +116,11 @@
 
 - name: Lilly Dittmann
   image: /images/people/dittmann_lilly.png
+  text: |
+    Trainingsunterstützung
+
+- name: Nele Schelde
+  image: /images/people/placeholder-female-transparent.png
   text: |
     Trainingsunterstützung
 
