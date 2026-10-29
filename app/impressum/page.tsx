@@ -31,7 +31,7 @@ export default function JoinPage() {
       <h3 className="text-lg font-bold mt-10 mb-2">Internetauftritt</h3>
 
       <h4 className="font-bold mt-3 mb-2 text-oxford-blue-200">Informationen i.S.v. § 5 DDG</h4>
-      <p>Die KTG Lüneburger Heide wird satzungsgemäß vertreten durch den Vorstand. Der Vorstand wird vertreten durch ihre Vorsitzende, Kristina von Tronchin.</p>
+      <p>Die KTG Lüneburger Heide wird satzungsgemäß vertreten durch den Vorstand. Der Vorstand wird vertreten durch ihren Vorsitzenden, Michail Saatmann.</p>
       <p>Geschäftsführung: Antje Kramer</p>
 
       <h4 className="font-bold mt-5 mb-2 text-oxford-blue-200">Technische Umsetzung/Gestaltung</h4>
